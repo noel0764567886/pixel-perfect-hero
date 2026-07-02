@@ -94,12 +94,14 @@ function SortenPage() {
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
                   <span className="text-xs text-foreground/60">{s.weight}</span>
                 </div>
-                <button
-                  aria-label={`${s.name} in den Warenkorb`}
+                <Link
+                  to="/sorten-detail"
+                  hash={s.name.toLowerCase()}
+                  aria-label={`${s.name} Details`}
                   className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
                 >
                   <Plus className="w-4 h-4" strokeWidth={2} />
-                </button>
+                </Link>
               </div>
             </article>
           ))}
