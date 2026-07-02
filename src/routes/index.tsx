@@ -1,6 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ShoppingBag, ArrowRight, Sparkles } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Sparkles } from "lucide-react";
 import heroFruits from "@/assets/hero-fruits.png";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -8,27 +10,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden">
-      <header className="mx-auto max-w-7xl px-6 lg:px-10 pt-8 flex items-center justify-between">
-        <a href="/" className="font-display italic text-3xl font-bold text-brand tracking-tight">
-          frulicious
-        </a>
-        <nav className="hidden md:flex items-center gap-9 text-sm text-foreground/80">
-          <a href="#sorten" className="hover:text-brand transition">Sorten</a>
-          <a href="#herstellung" className="hover:text-brand transition">Herstellung</a>
-          <a href="#team" className="hover:text-brand transition">Team</a>
-          <a href="#nachhaltigkeit" className="hover:text-brand transition">Nachhaltigkeit</a>
-          <a href="#kontakt" className="hover:text-brand transition">Kontakt</a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <button className="rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
-            Jetzt bestellen
-          </button>
-          <button aria-label="Warenkorb" className="text-foreground/80 hover:text-brand transition">
-            <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
-          </button>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden flex flex-col">
+      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative z-10">
@@ -44,9 +27,9 @@ function Index() {
             Wir tauchen bio-zertifizierte, gefriergetrocknete Früchte von Hand in feinste Schokolade – für einen Snack, der so klar schmeckt, wie er aussieht.
           </p>
           <div className="mt-12 flex items-center gap-8">
-            <button className="rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
+            <Link to="/sorten" className="rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
               Sorten entdecken
-            </button>
+            </Link>
             <a href="#story" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-brand transition">
               Unsere Geschichte
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
@@ -83,6 +66,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <SiteFooter />
     </div>
   );
 }
