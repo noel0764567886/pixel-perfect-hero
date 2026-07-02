@@ -9,12 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SortenDetailRouteImport } from './routes/sorten-detail'
 import { Route as SortenRouteImport } from './routes/sorten'
+import { Route as HerstellungRouteImport } from './routes/herstellung'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SortenDetailRoute = SortenDetailRouteImport.update({
+  id: '/sorten-detail',
+  path: '/sorten-detail',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SortenRoute = SortenRouteImport.update({
   id: '/sorten',
   path: '/sorten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HerstellungRoute = HerstellungRouteImport.update({
+  id: '/herstellung',
+  path: '/herstellung',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +37,59 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/herstellung': typeof HerstellungRoute
   '/sorten': typeof SortenRoute
+  '/sorten-detail': typeof SortenDetailRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/herstellung': typeof HerstellungRoute
   '/sorten': typeof SortenRoute
+  '/sorten-detail': typeof SortenDetailRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/herstellung': typeof HerstellungRoute
   '/sorten': typeof SortenRoute
+  '/sorten-detail': typeof SortenDetailRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sorten'
+  fullPaths: '/' | '/herstellung' | '/sorten' | '/sorten-detail'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sorten'
-  id: '__root__' | '/' | '/sorten'
+  to: '/' | '/herstellung' | '/sorten' | '/sorten-detail'
+  id: '__root__' | '/' | '/herstellung' | '/sorten' | '/sorten-detail'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HerstellungRoute: typeof HerstellungRoute
   SortenRoute: typeof SortenRoute
+  SortenDetailRoute: typeof SortenDetailRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sorten-detail': {
+      id: '/sorten-detail'
+      path: '/sorten-detail'
+      fullPath: '/sorten-detail'
+      preLoaderRoute: typeof SortenDetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sorten': {
       id: '/sorten'
       path: '/sorten'
       fullPath: '/sorten'
       preLoaderRoute: typeof SortenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/herstellung': {
+      id: '/herstellung'
+      path: '/herstellung'
+      fullPath: '/herstellung'
+      preLoaderRoute: typeof HerstellungRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HerstellungRoute: HerstellungRoute,
   SortenRoute: SortenRoute,
+  SortenDetailRoute: SortenDetailRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

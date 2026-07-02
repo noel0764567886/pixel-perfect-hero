@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import banane from "@/assets/sorte-banane.png";
 import kiwi from "@/assets/sorte-kiwi.png";
 import apfel from "@/assets/sorte-apfel.png";
@@ -59,9 +60,9 @@ function SortenPage() {
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
           Jede Sorte wird schonend gefriergetrocknet, um Geschmack und Nährstoffe zu bewahren – dann von Hand in Schokolade getaucht.
         </p>
-        <button className="mt-8 rounded-full bg-brand text-white px-7 py-3 text-sm font-medium hover:bg-brand/90 transition shadow-md">
+        <Link to="/sorten-detail" className="mt-8 inline-block rounded-full bg-brand text-white px-7 py-3 text-sm font-medium hover:bg-brand/90 transition shadow-md">
           Sorten entdecken
-        </button>
+        </Link>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24">
@@ -93,17 +94,21 @@ function SortenPage() {
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
                   <span className="text-xs text-foreground/60">{s.weight}</span>
                 </div>
-                <button
-                  aria-label={`${s.name} in den Warenkorb`}
+                <Link
+                  to="/sorten-detail"
+                  hash={s.name.toLowerCase()}
+                  aria-label={`${s.name} Details`}
                   className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
                 >
                   <Plus className="w-4 h-4" strokeWidth={2} />
-                </button>
+                </Link>
               </div>
             </article>
           ))}
         </div>
       </section>
+
+      <SiteFooter />
     </div>
   );
 }
