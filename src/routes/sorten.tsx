@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import banane from "@/assets/sorte-banane.png";
 import kiwi from "@/assets/sorte-kiwi.png";
 import apfel from "@/assets/sorte-apfel.png";
