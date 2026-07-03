@@ -72,7 +72,8 @@ const sorten: Sorte[] = [
 ];
 
 function SortenDetailPage() {
-  return (
+  const { addItem } = useCart();
+
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
 
