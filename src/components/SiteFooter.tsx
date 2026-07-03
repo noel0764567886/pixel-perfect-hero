@@ -26,10 +26,10 @@ export function SiteFooter() {
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Unternehmen</p>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li><a href="#team" className="hover:text-brand transition">Team</a></li>
-            <li><a href="#nachhaltigkeit" className="hover:text-brand transition">Nachhaltigkeit</a></li>
+            <li><Link to="/" hash="team" className="hover:text-brand transition">Team</Link></li>
+            <li><Link to="/nachhaltigkeit" className="hover:text-brand transition">Nachhaltigkeit</Link></li>
             <li><Link to="/herstellung" className="hover:text-brand transition">Herstellung</Link></li>
-            <li><a href="#kontakt" className="hover:text-brand transition">Kontakt</a></li>
+            <li><Link to="/" hash="kontakt" className="hover:text-brand transition">Kontakt</Link></li>
           </ul>
         </div>
 
