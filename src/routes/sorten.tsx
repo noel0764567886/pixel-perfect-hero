@@ -98,14 +98,14 @@ function SortenPage() {
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
                   <span className="text-xs text-foreground/60">{s.weight}</span>
                 </div>
-                <Link
-                  to="/sorten-detail"
-                  hash={s.name.toLowerCase()}
-                  aria-label={`${s.name} Details`}
+                <button
+                  onClick={() => addItem({ id: s.name.toLowerCase(), name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
+                  aria-label={`${s.name} in den Warenkorb`}
                   className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
                 >
                   <Plus className="w-4 h-4" strokeWidth={2} />
-                </Link>
+                </button>
+
               </div>
             </article>
           ))}
