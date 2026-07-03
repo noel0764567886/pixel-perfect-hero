@@ -18,7 +18,7 @@ export function SiteHeader() {
   );
 
   return (
-    <header className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-6 sm:pt-8 flex items-center justify-between gap-4">
+    <header className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-6 sm:pt-8 flex items-center justify-between gap-4">
       <Link to="/" className="font-display italic text-2xl sm:text-3xl font-bold text-brand tracking-tight shrink-0">
         frulicious
       </Link>
