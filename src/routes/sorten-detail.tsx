@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { useCart } from "@/context/cart";
 import banane from "@/assets/sorte-banane.png";
 import kiwi from "@/assets/sorte-kiwi.png";
 import apfel from "@/assets/sorte-apfel.png";
+
 
 export const Route = createFileRoute("/sorten-detail")({
   head: () => ({
@@ -70,8 +72,10 @@ const sorten: Sorte[] = [
 ];
 
 function SortenDetailPage() {
+  const { addItem } = useCart();
   return (
     <div className="min-h-screen bg-background flex flex-col">
+
       <SiteHeader />
 
       <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pt-16 pb-8">
@@ -103,9 +107,13 @@ function SortenDetailPage() {
                   {s.description}
                 </p>
                 <div className="mt-8 flex items-center gap-6">
-                  <button className="rounded-full border border-brand/40 text-brand px-6 py-2.5 text-sm font-medium hover:bg-brand hover:text-white transition">
+                  <button
+                    onClick={() => addItem({ id: s.id, name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
+                    className="rounded-full border border-brand/40 text-brand px-6 py-2.5 text-sm font-medium hover:bg-brand hover:text-white transition"
+                  >
                     In den Warenkorb
                   </button>
+
                   <span className="text-sm text-foreground/70">{s.price}</span>
                   <span className="text-sm text-foreground/50">{s.weight}</span>
                 </div>

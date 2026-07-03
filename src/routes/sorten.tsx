@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { useCart } from "@/context/cart";
 import banane from "@/assets/sorte-banane.png";
 import kiwi from "@/assets/sorte-kiwi.png";
 import apfel from "@/assets/sorte-apfel.png";
+
 
 export const Route = createFileRoute("/sorten")({
   head: () => ({
@@ -46,8 +48,10 @@ const sorten = [
 ];
 
 function SortenPage() {
+  const { addItem } = useCart();
   return (
     <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden">
+
       <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 lg:pt-24 pb-16">
@@ -94,14 +98,14 @@ function SortenPage() {
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
                   <span className="text-xs text-foreground/60">{s.weight}</span>
                 </div>
-                <Link
-                  to="/sorten-detail"
-                  hash={s.name.toLowerCase()}
-                  aria-label={`${s.name} Details`}
+                <button
+                  onClick={() => addItem({ id: s.name.toLowerCase(), name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
+                  aria-label={`${s.name} in den Warenkorb`}
                   className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
                 >
                   <Plus className="w-4 h-4" strokeWidth={2} />
-                </Link>
+                </button>
+
               </div>
             </article>
           ))}
