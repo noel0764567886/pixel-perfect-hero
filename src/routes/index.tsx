@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden flex flex-col">
       <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">

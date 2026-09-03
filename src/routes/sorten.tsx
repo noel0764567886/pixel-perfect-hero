@@ -50,7 +50,7 @@ const sorten = [
 function SortenPage() {
   const { addItem } = useCart();
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
 
       <SiteHeader />
 

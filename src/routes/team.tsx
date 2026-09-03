@@ -35,7 +35,7 @@ function TeamPage() {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
-            <p className="font-display italic text-2xl text-brand mb-8">frulicious</p>
+            <p className="font-display italic text-2xl text-bordeaux mb-8">frulicious</p>
             <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
               · Die Köpfe dahinter
             </p>

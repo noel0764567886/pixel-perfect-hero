@@ -41,9 +41,9 @@ const sorten: Sorte[] = [
     price: "CHF 6.90",
     weight: "50 g",
     image: banane,
-    bgFrom: "oklch(0.97 0.015 15)",
-    bgTo: "oklch(0.965 0.02 20)",
-    arch: "oklch(0.82 0.09 15)",
+    bgFrom: "rgb(253, 243, 243)",
+    bgTo: "rgb(249, 215, 214)",
+    arch: "rgb(244, 128, 129)",
   },
   {
     id: "kiwi",
@@ -53,9 +53,9 @@ const sorten: Sorte[] = [
     price: "CHF 6.90",
     weight: "50 g",
     image: kiwi,
-    bgFrom: "oklch(0.97 0.012 90)",
-    bgTo: "oklch(0.94 0.05 130)",
-    arch: "oklch(0.82 0.09 135)",
+    bgFrom: "rgb(248, 248, 243)",
+    bgTo: "rgb(214, 214, 196)",
+    arch: "rgb(171, 171, 145)",
   },
   {
     id: "apfel",
@@ -65,9 +65,9 @@ const sorten: Sorte[] = [
     price: "CHF 6.90",
     weight: "50 g",
     image: apfel,
-    bgFrom: "oklch(0.97 0.02 60)",
-    bgTo: "oklch(0.93 0.08 55)",
-    arch: "oklch(0.78 0.13 55)",
+    bgFrom: "rgb(253, 245, 236)",
+    bgTo: "rgb(245, 219, 187)",
+    arch: "rgb(231, 171, 101)",
   },
 ];
 
