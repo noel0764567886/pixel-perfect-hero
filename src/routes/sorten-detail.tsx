@@ -78,16 +78,17 @@ function SortenDetailPage() {
 
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pt-16 pb-8">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-8">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
           03 – Sorten Detail
         </p>
-        <h1 className="font-display text-5xl lg:text-6xl leading-[1.05] text-foreground">
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
           Sorten im Detail.
         </h1>
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pb-24 space-y-8 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-24 space-y-8 flex-1">
+
         {sorten.map((s) => (
           <article
             key={s.id}
@@ -96,28 +97,29 @@ function SortenDetailPage() {
             style={{ background: `linear-gradient(90deg, ${s.bgFrom} 0%, ${s.bgFrom} 55%, ${s.bgTo} 100%)` }}
           >
             <div className="grid md:grid-cols-2 items-center min-h-[280px]">
-              <div className="px-10 lg:px-16 py-12">
+              <div className="px-6 sm:px-10 lg:px-16 py-10 sm:py-12">
                 <p className="text-xs tracking-[0.25em] uppercase text-brand font-semibold">
                   {s.chocolate}
                 </p>
-                <h2 className="mt-3 font-display text-4xl lg:text-5xl text-foreground">
+                <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl text-foreground">
                   {s.name}
                 </h2>
                 <p className="mt-4 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-sm">
                   {s.description}
                 </p>
-                <div className="mt-8 flex items-center gap-6">
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
                   <button
                     onClick={() => addItem({ id: s.id, name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
-                    className="rounded-full border border-brand/40 text-brand px-6 py-2.5 text-sm font-medium hover:bg-brand hover:text-white transition"
+                    className="shrink-0 whitespace-nowrap rounded-full border border-brand/40 text-brand px-6 py-2.5 text-sm font-medium hover:bg-brand hover:text-white transition"
                   >
                     In den Warenkorb
                   </button>
 
-                  <span className="text-sm text-foreground/70">{s.price}</span>
-                  <span className="text-sm text-foreground/50">{s.weight}</span>
+                  <span className="whitespace-nowrap text-sm text-foreground/70">{s.price}</span>
+                  <span className="whitespace-nowrap text-sm text-foreground/50">{s.weight}</span>
                 </div>
               </div>
+
               <div className="relative h-[280px] md:h-full min-h-[280px]">
                 <div
                   className="absolute right-0 top-0 h-full w-[75%] rounded-l-[50%]"

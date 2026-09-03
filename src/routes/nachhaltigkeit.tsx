@@ -34,10 +34,11 @@ function NachhaltigkeitPage() {
     <div className="min-h-screen bg-[oklch(0.98_0.008_60)] flex flex-col">
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pt-16 pb-24 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-24 flex-1">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left card */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-soft p-10 lg:p-14 flex flex-col justify-center">
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-soft p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+
             <img
               src={leaves}
               alt=""
@@ -51,7 +52,7 @@ function NachhaltigkeitPage() {
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
                 · Von der Ernährlichkeit
               </p>
-              <h1 className="font-display text-4xl lg:text-5xl leading-[1.1] text-foreground">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
                 Gut für dich.<br />Gut für die Erde.
               </h1>
             </div>
