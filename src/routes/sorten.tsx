@@ -54,11 +54,11 @@ function SortenPage() {
 
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 lg:pt-24 pb-16">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
           · Unsere Sorten
         </p>
-        <h1 className="font-display text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
           Drei Früchte, in Schokolade<br />vollendet.
         </h1>
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
@@ -69,30 +69,31 @@ function SortenPage() {
         </Link>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24">
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-24">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
           {sorten.map((s) => (
             <article
               key={s.name}
-              className="relative bg-white rounded-3xl pt-56 pb-8 px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)]"
+              className="relative bg-white rounded-3xl pt-60 pb-8 px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)]"
             >
               {/* Pink arch behind image */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[75%] h-64 bg-brand-soft rounded-t-full rounded-b-none -z-0" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[75%] h-56 bg-brand-soft rounded-t-full rounded-b-none z-0" />
               <img
                 src={s.image}
                 alt={s.name}
                 width={1024}
                 height={1024}
                 loading="lazy"
-                className="absolute top-6 left-1/2 -translate-x-1/2 w-56 h-56 object-contain drop-shadow-xl z-10"
+                className="absolute top-6 left-1/2 -translate-x-1/2 w-52 h-52 object-contain drop-shadow-xl z-10"
               />
-              <h3 className="font-display text-2xl tracking-wide text-foreground">{s.name}</h3>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-brand font-medium">
+              <h3 className="relative z-20 font-display text-2xl tracking-wide text-foreground">{s.name}</h3>
+              <p className="relative z-20 mt-1 text-xs tracking-[0.2em] uppercase text-brand font-medium">
                 {s.chocolate}
               </p>
-              <p className="mt-4 text-sm text-foreground/70 leading-relaxed min-h-[4.5rem]">
+              <p className="relative z-20 mt-4 text-sm text-foreground/70 leading-relaxed min-h-[4.5rem]">
                 {s.description}
               </p>
+
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-baseline gap-3">
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
