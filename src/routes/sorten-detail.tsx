@@ -78,16 +78,17 @@ function SortenDetailPage() {
 
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pt-16 pb-8">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-8">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
           03 – Sorten Detail
         </p>
-        <h1 className="font-display text-5xl lg:text-6xl leading-[1.05] text-foreground">
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
           Sorten im Detail.
         </h1>
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-6 lg:px-10 pb-24 space-y-8 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-24 space-y-8 flex-1">
+
         {sorten.map((s) => (
           <article
             key={s.id}
