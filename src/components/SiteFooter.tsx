@@ -3,7 +3,7 @@ import { Instagram } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[oklch(0.965_0.015_20)] border-t border-brand/10">
+    <footer className="bg-[rgb(249,215,214)]/40 border-t border-brand/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid grid-cols-2 md:grid-cols-6 gap-10">
         <div className="col-span-2 md:col-span-2 flex flex-col justify-between gap-6">
           <Link to="/" className="font-display italic text-3xl font-bold text-bordeaux tracking-tight">
