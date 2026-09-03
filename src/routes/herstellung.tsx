@@ -67,10 +67,11 @@ function HerstellungPage() {
             return (
               <div key={s.n} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-                <div className="flex items-start gap-8">
-                  <span className="font-display text-5xl lg:text-6xl text-brand/70 leading-none pt-1">
+                <div className="flex items-start gap-5 sm:gap-8">
+                  <span className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand/70 leading-none pt-1 shrink-0">
                     {s.n}
                   </span>
+
                   <div className="pt-2">
                     <Icon className="w-7 h-7 text-foreground/70 mb-4" strokeWidth={1.5} />
                     <h3 className="font-display text-2xl text-foreground">{s.title}</h3>
