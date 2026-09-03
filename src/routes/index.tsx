@@ -13,12 +13,12 @@ function Index() {
     <div className="min-h-screen bg-gradient-to-b from-[oklch(0.965_0.022_15)] via-background to-[oklch(0.97_0.018_20)] overflow-hidden flex flex-col">
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative z-10">
           <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-8">
             Bio · Handgemacht · Gefriergetrocknet
           </p>
-          <h1 className="font-display text-6xl lg:text-7xl xl:text-8xl leading-[1.02] text-foreground font-normal">
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.02] text-foreground font-normal">
             Frucht trifft<br />
             <span className="text-brand italic font-normal">Schokolade.</span>
           </h1>
@@ -26,16 +26,17 @@ function Index() {
           <p className="mt-8 text-base lg:text-lg text-foreground/70 max-w-md leading-relaxed">
             Wir tauchen bio-zertifizierte, gefriergetrocknete Früchte von Hand in feinste Schokolade – für einen Snack, der so klar schmeckt, wie er aussieht.
           </p>
-          <div className="mt-12 flex items-center gap-8">
-            <Link to="/sorten" className="rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
+          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Link to="/sorten" className="whitespace-nowrap rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
               Sorten entdecken
             </Link>
-            <a href="#story" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-brand transition">
+            <a href="#story" className="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium text-foreground hover:text-brand transition">
               Unsere Geschichte
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </a>
           </div>
         </div>
+
 
         <div className="relative">
           <Sparkles className="absolute -left-4 top-16 w-6 h-6 text-brand/70 z-10" strokeWidth={1.5} />
