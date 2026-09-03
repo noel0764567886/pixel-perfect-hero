@@ -26,43 +26,50 @@
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
+  --color-bordeaux: var(--bordeaux);
+  --color-rose-accent: var(--rose-accent);
   --color-olive: var(--olive);
   --color-amber-accent: var(--amber-accent);
-  --font-display: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
   --radius: 2rem;
-  /* soft pink page background from the mock */
-  --background: oklch(0.975 0.012 15);
-  --foreground: oklch(0.20 0.02 20);
+  /* Sekundärfarbe helles Rosé rgb(249,215,214) als Seitenhintergrund */
+  --background: rgb(253 243 243);
+  --foreground: rgb(45 30 33);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0.02 20);
+  --card: rgb(255 255 255);
+  --card-foreground: rgb(45 30 33);
 
-  /* brand rose #F07A86 */
-  --brand: oklch(0.68 0.14 15);
-  --brand-soft: oklch(0.88 0.06 15);
-  /* olive #A29B78 */
-  --olive: oklch(0.66 0.04 100);
-  /* amber #E6A457 */
-  --amber-accent: oklch(0.76 0.12 70);
+  /* Primärfarbe: dunkles Bordeauxrot rgb(78,10,25) */
+  --bordeaux: rgb(78 10 25);
+  /* Akzentfarbe Rosé rgb(244,128,129) */
+  --rose-accent: rgb(244 128 129);
+  --brand: rgb(244 128 129);
+  /* Sekundärfarbe helles Rosé rgb(249,215,214) */
+  --brand-soft: rgb(249 215 214);
+  /* Akzentfarbe Olive rgb(171,171,145) */
+  --olive: rgb(171 171 145);
+  /* Akzentfarbe Amber rgb(231,171,101) */
+  --amber-accent: rgb(231 171 101);
 
-  --primary: var(--brand);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.02 15);
-  --secondary-foreground: oklch(0.20 0.02 20);
-  --muted: oklch(0.95 0.02 15);
-  --muted-foreground: oklch(0.45 0.02 20);
-  --accent: oklch(0.95 0.02 15);
-  --accent-foreground: oklch(0.20 0.02 20);
+  --primary: var(--bordeaux);
+  --primary-foreground: rgb(255 255 255);
+  --secondary: var(--brand-soft);
+  --secondary-foreground: var(--bordeaux);
+  --muted: rgb(249 235 235);
+  --muted-foreground: rgb(110 85 90);
+  --accent: var(--brand-soft);
+  --accent-foreground: var(--bordeaux);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.90 0.02 15);
-  --input: oklch(0.90 0.02 15);
-  --ring: var(--brand);
+  --border: rgb(240 218 218);
+  --input: rgb(240 218 218);
+  --ring: var(--bordeaux);
 }
+
 
 @layer base {
   * { border-color: var(--color-border); }
