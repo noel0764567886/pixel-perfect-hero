@@ -52,7 +52,7 @@ function NachhaltigkeitPage() {
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
                 · Von der Ernährlichkeit
               </p>
-              <h1 className="font-display text-4xl lg:text-5xl leading-[1.1] text-foreground">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
                 Gut für dich.<br />Gut für die Erde.
               </h1>
             </div>
