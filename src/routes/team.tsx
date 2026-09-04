@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import logo from "@/assets/frulicious-logo.png.asset.json";
+import logo from "@/assets/frulicious-logo.png";
 
 
 export const Route = createFileRoute("/team")({
@@ -37,7 +37,7 @@ function TeamPage() {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
-            <img src={logo.url} alt="frulicious Logo" className="h-16 w-auto mb-8" />
+            <img src={logo} alt="frulicious Logo" className="h-16 w-auto mb-8" />
             <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
               · Die Köpfe dahinter
             </p>

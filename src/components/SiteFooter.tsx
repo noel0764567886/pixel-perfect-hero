@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
-import logo from "@/assets/frulicious-logo.png.asset.json";
+import logo from "@/assets/frulicious-logo.png";
 
 export function SiteFooter() {
   return (
@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid grid-cols-2 md:grid-cols-6 gap-10">
         <div className="col-span-2 md:col-span-2 flex flex-col justify-between gap-6">
           <Link to="/" aria-label="frulicious Startseite">
-            <img src={logo.url} alt="frulicious Logo" className="h-16 w-auto" />
+            <img src={logo} alt="frulicious Logo" className="h-16 w-auto" />
           </Link>
 
           <p className="text-xs text-foreground/60">
