@@ -19,9 +19,10 @@ export function SiteHeader() {
 
   return (
     <header className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-6 sm:pt-8 flex items-center justify-between gap-4">
-      <Link to="/" className="font-display italic text-2xl sm:text-3xl font-bold text-bordeaux tracking-tight shrink-0">
-        frulicious
+      <Link to="/" className="shrink-0" aria-label="frulicious Startseite">
+        <img src={logo.url} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
       </Link>
+
       <nav className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
         {navLinks}
       </nav>
