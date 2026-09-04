@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/context/cart";
+import logo from "@/assets/frulicious-logo.png.asset.json";
+
 
 export function SiteHeader() {
   const { openCart, count } = useCart();
