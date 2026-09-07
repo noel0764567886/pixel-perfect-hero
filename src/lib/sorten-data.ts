@@ -28,8 +28,8 @@ export const sorten: Sorte[] = [
     name: "BANANE",
     chocolate: "DUNKLE SCHOKOLADE",
     description: "Süss-aromatisch und leicht mürbe, ummantelt mit kräftiger, dunkler Schokolade.",
-    price: "CHF 6.00",
-    weight: "50 g",
+    price: "CHF 10.90",
+    weight: "45 g",
     image: banane,
     intro: "Sonnengereifte Bananen, schonend gefriergetrocknet und in kräftige dunkle Schokolade getaucht.",
     story: [
@@ -54,8 +54,8 @@ export const sorten: Sorte[] = [
     name: "KIWI",
     chocolate: "MILCHSCHOKOLADE",
     description: "Fruchtig-frisch mit feiner Säure, getaucht in zarter Milchschokolade.",
-    price: "CHF 6.90",
-    weight: "50 g",
+    price: "CHF 10.90",
+    weight: "45 g",
     image: kiwi,
     intro: "Frische Kiwis mit feiner Säure, umhüllt von zartschmelzender Milchschokolade.",
     story: [
@@ -80,8 +80,8 @@ export const sorten: Sorte[] = [
     name: "APFEL",
     chocolate: "MILCHSCHOKOLADE",
     description: "Knackig-süss, umhüllt von zartschmelzender Milchschokolade.",
-    price: "CHF 6.90",
-    weight: "50 g",
+    price: "CHF 10.90",
+    weight: "45 g",
     image: apfel,
     intro: "Schweizer Äpfel, hauchdünn geschnitten und in zartschmelzende Milchschokolade gehüllt.",
     story: [
