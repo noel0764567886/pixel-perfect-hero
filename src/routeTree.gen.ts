@@ -13,6 +13,7 @@ import { Route as TeamRouteImport } from './routes/team'
 import { Route as SortenDetailRouteImport } from './routes/sorten-detail'
 import { Route as SortenRouteImport } from './routes/sorten'
 import { Route as NachhaltigkeitRouteImport } from './routes/nachhaltigkeit'
+import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as HerstellungRouteImport } from './routes/herstellung'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ const NachhaltigkeitRoute = NachhaltigkeitRouteImport.update({
   path: '/nachhaltigkeit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImpressumRoute = ImpressumRouteImport.update({
   id: '/impressum',
   path: '/impressum',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
   '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
   '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
   '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/herstellung'
     | '/impressum'
+    | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
     | '/sorten-detail'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/herstellung'
     | '/impressum'
+    | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
     | '/sorten-detail'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/herstellung'
     | '/impressum'
+    | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
     | '/sorten-detail'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HerstellungRoute: typeof HerstellungRoute
   ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
   NachhaltigkeitRoute: typeof NachhaltigkeitRoute
   SortenRoute: typeof SortenRoute
   SortenDetailRoute: typeof SortenDetailRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NachhaltigkeitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/impressum': {
       id: '/impressum'
       path: '/impressum'
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HerstellungRoute: HerstellungRoute,
   ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
   NachhaltigkeitRoute: NachhaltigkeitRoute,
   SortenRoute: SortenRoute,
   SortenDetailRoute: SortenDetailRoute,
