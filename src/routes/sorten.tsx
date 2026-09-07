@@ -3,9 +3,7 @@ import { Plus } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useCart } from "@/context/cart";
-import banane from "@/assets/sorte-banane.png";
-import kiwi from "@/assets/sorte-kiwi.png";
-import apfel from "@/assets/sorte-apfel.png";
+import { sorten } from "@/lib/sorten-data";
 
 
 export const Route = createFileRoute("/sorten")({
@@ -19,33 +17,6 @@ export const Route = createFileRoute("/sorten")({
   }),
   component: SortenPage,
 });
-
-const sorten = [
-  {
-    name: "BANANE",
-    chocolate: "DUNKLE SCHOKOLADE",
-    description: "Süss-aromatisch und leicht mürbe, ummantelt mit kräftiger, dunkler Schokolade.",
-    price: "CHF 6.00",
-    weight: "50 g",
-    image: banane,
-  },
-  {
-    name: "KIWI",
-    chocolate: "MILCHSCHOKOLADE",
-    description: "Fruchtig-frisch mit feiner Säure, getaucht in zarter Milchschokolade.",
-    price: "CHF 6.90",
-    weight: "50 g",
-    image: kiwi,
-  },
-  {
-    name: "APFEL",
-    chocolate: "MILCHSCHOKOLADE",
-    description: "Knackig-süss, umhüllt von zartschmelzender Milchschokolade.",
-    price: "CHF 6.90",
-    weight: "50 g",
-    image: apfel,
-  },
-];
 
 function SortenPage() {
   const { addItem } = useCart();
@@ -86,7 +57,9 @@ function SortenPage() {
                 loading="lazy"
                 className="absolute top-6 left-1/2 -translate-x-1/2 w-52 h-52 object-contain drop-shadow-xl z-10"
               />
-              <h3 className="relative z-20 font-display text-2xl tracking-wide text-foreground">{s.name}</h3>
+              <Link to="/sorte/$slug" params={{ slug: s.slug }} className="relative z-20 block">
+                <h3 className="font-display text-2xl tracking-wide text-foreground hover:text-brand transition">{s.name}</h3>
+              </Link>
               <p className="relative z-20 mt-1 text-xs tracking-[0.2em] uppercase text-brand font-medium">
                 {s.chocolate}
               </p>
@@ -94,13 +67,17 @@ function SortenPage() {
                 {s.description}
               </p>
 
+              <Link to="/sorte/$slug" params={{ slug: s.slug }} className="relative z-20 mt-4 inline-block text-sm text-brand underline underline-offset-4 hover:opacity-80 transition">
+                Mehr über {s.name.charAt(0) + s.name.slice(1).toLowerCase()}
+              </Link>
+
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-baseline gap-3">
                   <span className="text-sm font-semibold text-foreground">{s.price}</span>
                   <span className="text-xs text-foreground/60">{s.weight}</span>
                 </div>
                 <button
-                  onClick={() => addItem({ id: s.name.toLowerCase(), name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
+                  onClick={() => addItem({ id: s.slug, name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
                   aria-label={`${s.name} in den Warenkorb`}
                   className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
                 >

@@ -17,6 +17,7 @@ import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as HerstellungRouteImport } from './routes/herstellung'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SorteSlugRouteImport } from './routes/sorte.$slug'
 
 const TeamRoute = TeamRouteImport.update({
   id: '/team',
@@ -58,6 +59,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SorteSlugRoute = SorteSlugRouteImport.update({
+  id: '/sorte/$slug',
+  path: '/sorte/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
+  '/sorte/$slug': typeof SorteSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
+  '/sorte/$slug': typeof SorteSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/sorten': typeof SortenRoute
   '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
+  '/sorte/$slug': typeof SorteSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/sorten'
     | '/sorten-detail'
     | '/team'
+    | '/sorte/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/sorten'
     | '/sorten-detail'
     | '/team'
+    | '/sorte/$slug'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/sorten'
     | '/sorten-detail'
     | '/team'
+    | '/sorte/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   SortenRoute: typeof SortenRoute
   SortenDetailRoute: typeof SortenDetailRoute
   TeamRoute: typeof TeamRoute
+  SorteSlugRoute: typeof SorteSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sorte/$slug': {
+      id: '/sorte/$slug'
+      path: '/sorte/$slug'
+      fullPath: '/sorte/$slug'
+      preLoaderRoute: typeof SorteSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   SortenRoute: SortenRoute,
   SortenDetailRoute: SortenDetailRoute,
   TeamRoute: TeamRoute,
+  SorteSlugRoute: SorteSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
