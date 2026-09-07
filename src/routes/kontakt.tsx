@@ -84,6 +84,15 @@ function KontaktPage() {
               {status === "sending" ? "Wird gesendet …" : "Nachricht senden"}
             </button>
             {status === "sent" && <span className="text-sm text-foreground/70">Danke! Deine Nachricht ist unterwegs.</span>}
+            {status === "pending-setup" && (
+              <span className="text-sm text-foreground/70">
+                Der automatische Versand ist noch nicht aktiv –{" "}
+                <a href={mailtoHref} className="text-brand underline underline-offset-2">
+                  hier direkt per E-Mail senden
+                </a>
+                .
+              </span>
+            )}
             {status === "error" && <span className="text-sm text-brand">Das hat leider nicht geklappt. Bitte versuch es nochmals.</span>}
           </div>
         </form>
