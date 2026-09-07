@@ -9,37 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as HerstellungRouteImport } from './routes/herstellung'
-import { Route as ImpressumRouteImport } from './routes/impressum'
-import { Route as NachhaltigkeitRouteImport } from './routes/nachhaltigkeit'
-import { Route as SortenRouteImport } from './routes/sorten'
-import { Route as SortenDetailRouteImport } from './routes/sorten-detail'
 import { Route as TeamRouteImport } from './routes/team'
+import { Route as SortenDetailRouteImport } from './routes/sorten-detail'
+import { Route as SortenRouteImport } from './routes/sorten'
+import { Route as NachhaltigkeitRouteImport } from './routes/nachhaltigkeit'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as HerstellungRouteImport } from './routes/herstellung'
+import { Route as IndexRouteImport } from './routes/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HerstellungRoute = HerstellungRouteImport.update({
-  id: '/herstellung',
-  path: '/herstellung',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImpressumRoute = ImpressumRouteImport.update({
-  id: '/impressum',
-  path: '/impressum',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NachhaltigkeitRoute = NachhaltigkeitRouteImport.update({
-  id: '/nachhaltigkeit',
-  path: '/nachhaltigkeit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SortenRoute = SortenRouteImport.update({
-  id: '/sorten',
-  path: '/sorten',
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SortenDetailRoute = SortenDetailRouteImport.update({
@@ -47,9 +27,29 @@ const SortenDetailRoute = SortenDetailRouteImport.update({
   path: '/sorten-detail',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TeamRoute = TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
+const SortenRoute = SortenRouteImport.update({
+  id: '/sorten',
+  path: '/sorten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NachhaltigkeitRoute = NachhaltigkeitRouteImport.update({
+  id: '/nachhaltigkeit',
+  path: '/nachhaltigkeit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HerstellungRoute = HerstellungRouteImport.update({
+  id: '/herstellung',
+  path: '/herstellung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -123,39 +123,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/herstellung': {
-      id: '/herstellung'
-      path: '/herstellung'
-      fullPath: '/herstellung'
-      preLoaderRoute: typeof HerstellungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/impressum': {
-      id: '/impressum'
-      path: '/impressum'
-      fullPath: '/impressum'
-      preLoaderRoute: typeof ImpressumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/nachhaltigkeit': {
-      id: '/nachhaltigkeit'
-      path: '/nachhaltigkeit'
-      fullPath: '/nachhaltigkeit'
-      preLoaderRoute: typeof NachhaltigkeitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sorten': {
-      id: '/sorten'
-      path: '/sorten'
-      fullPath: '/sorten'
-      preLoaderRoute: typeof SortenRouteImport
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sorten-detail': {
@@ -165,11 +137,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SortenDetailRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/team': {
-      id: '/team'
-      path: '/team'
-      fullPath: '/team'
-      preLoaderRoute: typeof TeamRouteImport
+    '/sorten': {
+      id: '/sorten'
+      path: '/sorten'
+      fullPath: '/sorten'
+      preLoaderRoute: typeof SortenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nachhaltigkeit': {
+      id: '/nachhaltigkeit'
+      path: '/nachhaltigkeit'
+      fullPath: '/nachhaltigkeit'
+      preLoaderRoute: typeof NachhaltigkeitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/herstellung': {
+      id: '/herstellung'
+      path: '/herstellung'
+      fullPath: '/herstellung'
+      preLoaderRoute: typeof HerstellungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
