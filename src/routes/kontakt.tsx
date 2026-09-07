@@ -20,17 +20,25 @@ function KontaktPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "pending-setup" | "error">("idle");
+
+  const mailtoHref = `mailto:frulicious@outlook.com?subject=${encodeURIComponent(
+    `Kontaktanfrage von ${name || "der Website"}`,
+  )}&body=${encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\n\n${message}`)}`;
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("sending");
     try {
-      await sendContactMessage({ data: { name, email, message } });
-      setStatus("sent");
-      setName("");
-      setEmail("");
-      setMessage("");
+      const result = await sendContactMessage({ data: { name, email, message } });
+      if (result?.sent) {
+        setStatus("sent");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus("pending-setup");
+      }
     } catch {
       setStatus("error");
     }
@@ -76,6 +84,15 @@ function KontaktPage() {
               {status === "sending" ? "Wird gesendet …" : "Nachricht senden"}
             </button>
             {status === "sent" && <span className="text-sm text-foreground/70">Danke! Deine Nachricht ist unterwegs.</span>}
+            {status === "pending-setup" && (
+              <span className="text-sm text-foreground/70">
+                Der automatische Versand ist noch nicht aktiv –{" "}
+                <a href={mailtoHref} className="text-brand underline underline-offset-2">
+                  hier direkt per E-Mail senden
+                </a>
+                .
+              </span>
+            )}
             {status === "error" && <span className="text-sm text-brand">Das hat leider nicht geklappt. Bitte versuch es nochmals.</span>}
           </div>
         </form>

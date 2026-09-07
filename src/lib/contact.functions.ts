@@ -12,5 +12,5 @@ export const sendContactMessage = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     // E-Mail-Versand wird aktiviert, sobald die Absender-Adresse eingerichtet ist.
     console.log("Kontaktanfrage", { name: data.name, email: data.email });
-    throw new Error("E-Mail-Versand ist noch nicht eingerichtet.");
+    return { sent: false as const, reason: "email_not_configured" as const };
   });
