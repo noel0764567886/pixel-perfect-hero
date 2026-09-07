@@ -15,7 +15,7 @@ export function SiteHeader() {
       <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Herstellung</Link>
       <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Team</Link>
       <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Nachhaltigkeit</Link>
-      <Link to="/" hash="kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition">Kontakt</Link>
+      <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Kontakt</Link>
     </>
   );
 
