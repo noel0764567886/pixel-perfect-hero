@@ -1,6 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Plus } from "lucide-react";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useCart } from "@/context/cart";
 import { getSorte, sorten } from "@/lib/sorten-data";
@@ -33,7 +32,6 @@ export const Route = createFileRoute("/sorte/$slug")({
 function SorteNotFound() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
       <section className="mx-auto max-w-3xl w-full px-4 sm:px-6 lg:px-10 py-24 flex-1">
         <h1 className="font-display text-4xl text-foreground">Diese Sorte gibt es nicht.</h1>
         <Link to="/sorten" className="mt-6 inline-block text-brand underline underline-offset-4">
@@ -52,7 +50,6 @@ function SortePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-14 pb-16">
         <Link to="/sorten" className="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-brand transition">
