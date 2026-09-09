@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Leaf, Package } from "lucide-react";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 
@@ -32,7 +31,6 @@ const points = [
 function NachhaltigkeitPage() {
   return (
     <div className="min-h-screen bg-[rgb(253,246,243)] flex flex-col">
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-24 flex-1">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">

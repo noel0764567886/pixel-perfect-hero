@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import logo from "@/assets/frulicious-logo.png";
 
@@ -28,7 +27,6 @@ const team = [
 function TeamPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-10 sm:pt-14">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-8">
