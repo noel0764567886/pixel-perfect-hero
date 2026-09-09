@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { sendContactMessage } from "@/lib/contact.functions";
 
@@ -49,7 +48,6 @@ function KontaktPage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
 
       <section className="mx-auto max-w-3xl w-full px-4 sm:px-6 lg:px-10 pt-16 pb-24 flex-1">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">· Kontakt</p>

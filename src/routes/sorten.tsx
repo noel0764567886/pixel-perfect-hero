@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useCart } from "@/context/cart";
 import { sorten } from "@/lib/sorten-data";
@@ -22,8 +21,6 @@ function SortenPage() {
   const { addItem } = useCart();
   return (
     <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
-
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">

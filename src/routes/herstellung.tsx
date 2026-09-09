@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Leaf, Snowflake, Utensils } from "lucide-react";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import ernte from "@/assets/herstellung-ernte.jpg";
 import produktion from "@/assets/herstellung-produktion.jpg";
@@ -48,7 +47,6 @@ const steps = [
 function HerstellungPage() {
   return (
     <div className="min-h-screen bg-[rgb(253,246,243)] flex flex-col">
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-8">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
