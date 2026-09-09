@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
-import logo from "@/assets/frulicious-logo.png";
 
 
 export const Route = createFileRoute("/team")({
