@@ -29,7 +29,7 @@ export function SiteHeader() {
         {navLinks}
       </nav>
       <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-        <Link to="/sorten-detail" className="hidden sm:inline-flex rounded-full bg-brand text-white px-5 sm:px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
+        <Link to="/sorten" className="hidden sm:inline-flex rounded-full bg-brand text-white px-5 sm:px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
           Jetzt bestellen
         </Link>
         <button aria-label="Warenkorb öffnen" onClick={openCart} className="relative text-foreground/80 hover:text-brand transition">
@@ -52,7 +52,7 @@ export function SiteHeader() {
       {mobileOpen && (
         <div className="absolute top-full left-0 right-0 mt-4 mx-4 sm:mx-6 bg-white rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50">
           {navLinks}
-          <Link to="/sorten-detail" onClick={() => setMobileOpen(false)} className="sm:hidden rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium text-center hover:bg-brand/90 transition mt-2">
+          <Link to="/sorten" onClick={() => setMobileOpen(false)} className="sm:hidden rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium text-center hover:bg-brand/90 transition mt-2">
             Jetzt bestellen
           </Link>
         </div>
