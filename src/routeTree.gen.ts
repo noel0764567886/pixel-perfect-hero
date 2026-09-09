@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeamRouteImport } from './routes/team'
-import { Route as SortenDetailRouteImport } from './routes/sorten-detail'
 import { Route as SortenRouteImport } from './routes/sorten'
 import { Route as NachhaltigkeitRouteImport } from './routes/nachhaltigkeit'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -22,11 +21,6 @@ import { Route as SorteSlugRouteImport } from './routes/sorte.$slug'
 const TeamRoute = TeamRouteImport.update({
   id: '/team',
   path: '/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SortenDetailRoute = SortenDetailRouteImport.update({
-  id: '/sorten-detail',
-  path: '/sorten-detail',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SortenRoute = SortenRouteImport.update({
@@ -72,7 +66,6 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
-  '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
   '/sorte/$slug': typeof SorteSlugRoute
 }
@@ -83,7 +76,6 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
-  '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
   '/sorte/$slug': typeof SorteSlugRoute
 }
@@ -95,7 +87,6 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
-  '/sorten-detail': typeof SortenDetailRoute
   '/team': typeof TeamRoute
   '/sorte/$slug': typeof SorteSlugRoute
 }
@@ -108,7 +99,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
-    | '/sorten-detail'
     | '/team'
     | '/sorte/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -119,7 +109,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
-    | '/sorten-detail'
     | '/team'
     | '/sorte/$slug'
   id:
@@ -130,7 +119,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
-    | '/sorten-detail'
     | '/team'
     | '/sorte/$slug'
   fileRoutesById: FileRoutesById
@@ -142,7 +130,6 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   NachhaltigkeitRoute: typeof NachhaltigkeitRoute
   SortenRoute: typeof SortenRoute
-  SortenDetailRoute: typeof SortenDetailRoute
   TeamRoute: typeof TeamRoute
   SorteSlugRoute: typeof SorteSlugRoute
 }
@@ -154,13 +141,6 @@ declare module '@tanstack/react-router' {
       path: '/team'
       fullPath: '/team'
       preLoaderRoute: typeof TeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sorten-detail': {
-      id: '/sorten-detail'
-      path: '/sorten-detail'
-      fullPath: '/sorten-detail'
-      preLoaderRoute: typeof SortenDetailRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sorten': {
@@ -222,7 +202,6 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   NachhaltigkeitRoute: NachhaltigkeitRoute,
   SortenRoute: SortenRoute,
-  SortenDetailRoute: SortenDetailRoute,
   TeamRoute: TeamRoute,
   SorteSlugRoute: SorteSlugRoute,
 }
