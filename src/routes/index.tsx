@@ -4,6 +4,23 @@ import heroFruits from "@/assets/hero-fruits.png";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "frulicious – Frucht trifft Schokolade" },
+      {
+        name: "description",
+        content:
+          "Bio-zertifizierte, gefriergetrocknete Früchte von Hand in feinste Schokolade getaucht – Banane, Kiwi und Apfel aus der Schweiz.",
+      },
+      { property: "og:title", content: "frulicious – Frucht trifft Schokolade" },
+      {
+        property: "og:description",
+        content: "Bio-zertifizierte, gefriergetrocknete Früchte von Hand in feinste Schokolade getaucht.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 

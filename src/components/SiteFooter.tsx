@@ -38,13 +38,23 @@ export function SiteFooter() {
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Kontakt</p>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li>Frulicious@outlook.com</li>
+            <li>
+              <a href="mailto:frulicious@outlook.com" className="hover:text-brand transition">
+                frulicious@outlook.com
+              </a>
+            </li>
             <li>Musterstrasse 1, 3000 Bern</li>
           </ul>
         </div>
 
         <div className="flex flex-col items-start md:items-end justify-between gap-6">
-          <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition">
+          <a
+            href="https://www.instagram.com/frulicious"
+            target="_blank"
+            rel="noopener noreferrer external"
+            aria-label="frulicious auf Instagram (öffnet in neuem Tab)"
+            className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
+          >
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
           </a>
           <Link
