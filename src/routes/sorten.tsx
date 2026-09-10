@@ -32,9 +32,6 @@ function SortenPage() {
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
           Jede Sorte wird schonend gefriergetrocknet, um Geschmack und Nährstoffe zu bewahren – dann von Hand in Schokolade getaucht.
         </p>
-        <Link to="/sorte/$slug" params={{ slug: "banane" }} className="mt-8 inline-block rounded-full bg-brand text-white px-7 py-3 text-sm font-medium hover:bg-brand/90 transition shadow-md">
-          Sorten entdecken
-        </Link>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-24">
