@@ -49,7 +49,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-start md:items-end justify-between gap-6">
           <a
-            href="https://www.instagram.com/frulicious"
+            href="https://www.instagram.com/frulicious_official?stkn=MWlyazR5OTN1a3hpOQ=="
             target="_blank"
             rel="noopener noreferrer external"
             aria-label="frulicious auf Instagram (öffnet in neuem Tab)"
