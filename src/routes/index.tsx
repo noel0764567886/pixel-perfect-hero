@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import heroFruits from "@/assets/hero-fruits.png";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -45,10 +45,6 @@ function Index() {
             <Link to="/sorten" className="whitespace-nowrap rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
               Sorten entdecken
             </Link>
-            <a href="#story" className="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium text-foreground hover:text-brand transition">
-              Unsere Geschichte
-              <ArrowRight className="w-4 h-4" strokeWidth={2} />
-            </a>
           </div>
         </div>
 
