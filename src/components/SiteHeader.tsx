@@ -1,62 +1,96 @@
 import { Link } from "@tanstack/react-router";
 import { ShoppingBag, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCart } from "@/context/cart";
 import logo from "@/assets/frulicious-logo.png";
-
 
 export function SiteHeader() {
   const { openCart, count } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    const onClick = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) setMobileOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, [mobileOpen]);
 
   const navLinks = (
     <>
-      <Link to="/sorten" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Sorten</Link>
-      <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Herstellung</Link>
-      <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Team</Link>
-      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Nachhaltigkeit</Link>
-      <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand">Kontakt</Link>
+      <Link to="/sorten" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Sorten</Link>
+      <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Herstellung</Link>
+      <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Team</Link>
+      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Nachhaltigkeit</Link>
+      <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Kontakt</Link>
     </>
   );
 
   return (
-    <header className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-6 sm:pt-8 flex items-center justify-between gap-4">
-      <Link to="/" className="shrink-0" aria-label="frulicious Startseite">
-        <img src={logo} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
-      </Link>
-
-      <nav className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
-        {navLinks}
-      </nav>
-      <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-        <Link to="/sorten" className="hidden sm:inline-flex rounded-full bg-brand text-white px-5 sm:px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
-          Jetzt bestellen
+    <div className="sticky top-0 z-50 bg-background/85 backdrop-blur-md">
+      <header
+        ref={headerRef}
+        className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-4 sm:py-5 flex items-center justify-between gap-4"
+      >
+        <Link to="/" className="shrink-0" aria-label="frulicious Startseite">
+          <img src={logo} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
         </Link>
-        <button aria-label="Warenkorb öffnen" onClick={openCart} className="relative text-foreground/80 hover:text-brand transition">
-          <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
-          {count > 0 && (
-            <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-brand text-white text-[10px] font-semibold flex items-center justify-center">
-              {count}
-            </span>
-          )}
-        </button>
-        <button
-          aria-label="Menü öffnen"
-          onClick={() => setMobileOpen((v) => !v)}
-          className="lg:hidden text-foreground/80 hover:text-brand transition"
-        >
-          {mobileOpen ? <X className="w-6 h-6" strokeWidth={1.5} /> : <Menu className="w-6 h-6" strokeWidth={1.5} />}
-        </button>
-      </div>
 
-      {mobileOpen && (
-        <div className="absolute top-full left-0 right-0 mt-4 mx-4 sm:mx-6 bg-white rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50">
+        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
           {navLinks}
-          <Link to="/sorten" onClick={() => setMobileOpen(false)} className="sm:hidden rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium text-center hover:bg-brand/90 transition mt-2">
+        </nav>
+
+        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+          <Link to="/sorten" className="hidden sm:inline-flex rounded-full bg-brand text-white px-5 sm:px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
             Jetzt bestellen
           </Link>
+          <button
+            type="button"
+            aria-label={count > 0 ? `Warenkorb öffnen, ${count} Artikel` : "Warenkorb öffnen"}
+            onClick={openCart}
+            className="relative text-foreground/80 hover:text-brand transition"
+          >
+            <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
+            {count > 0 && (
+              <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-brand text-white text-[10px] font-semibold flex items-center justify-center">
+                {count}
+              </span>
+            )}
+          </button>
+          <button
+            type="button"
+            aria-label={mobileOpen ? "Menü schliessen" : "Menü öffnen"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setMobileOpen((v) => !v)}
+            className="lg:hidden text-foreground/80 hover:text-brand transition"
+          >
+            {mobileOpen ? <X className="w-6 h-6" strokeWidth={1.5} /> : <Menu className="w-6 h-6" strokeWidth={1.5} />}
+          </button>
         </div>
-      )}
-    </header>
+
+        {mobileOpen && (
+          <nav
+            id="mobile-nav"
+            aria-label="Mobile Navigation"
+            className="absolute top-full left-0 right-0 mt-3 mx-4 sm:mx-6 bg-white rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50"
+          >
+            {navLinks}
+            <Link to="/sorten" onClick={() => setMobileOpen(false)} className="sm:hidden rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium text-center hover:bg-brand/90 transition mt-2">
+              Jetzt bestellen
+            </Link>
+          </nav>
+        )}
+      </header>
+    </div>
   );
 }
