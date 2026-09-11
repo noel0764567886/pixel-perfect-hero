@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import heroFruits from "@/assets/hero-fruits.png";
 import { SiteFooter } from "@/components/SiteFooter";
 
