@@ -33,7 +33,7 @@ function Index() {
           <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-8">
             Bio · Handgemacht · Gefriergetrocknet
           </p>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.02] text-foreground font-normal">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground font-normal">
              Gefriergetrocknete Früchte in<br />
              <span className="text-brand italic font-normal">Schokolade vollendet.</span>
           </h1>

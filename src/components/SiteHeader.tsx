@@ -45,7 +45,7 @@ export function SiteHeader() {
           <img src={logo} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
         </Link>
 
-        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
+        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-5 text-sm text-foreground/80">
           {navLinks}
         </nav>
 
