@@ -36,24 +36,16 @@ function TeamPage() {
     <div className="min-h-screen bg-background flex flex-col">
 
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-10 sm:pt-16 pb-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div>
-            <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-              · Die Köpfe dahinter
-            </p>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
-               Unser Team
-            </h1>
-            <p className="mt-6 text-base sm:text-lg text-foreground/70 max-w-md leading-relaxed">
-               Lerne die Köpfe hinter Frulicious besser kennen.
-            </p>
-          </div>
-
-          <div className="relative w-full aspect-[4/3] rounded-3xl bg-brand-soft flex items-center justify-center overflow-hidden">
-            <div className="rounded-full bg-brand/70 text-white px-6 py-3 text-xs tracking-[0.2em] uppercase font-medium">
-              Foto: Das ganze Team
-            </div>
-          </div>
+        <div>
+          <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
+            · Die Köpfe dahinter
+          </p>
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+            Unser Team
+          </h1>
+          <p className="mt-6 text-base sm:text-lg text-foreground/70 max-w-md leading-relaxed">
+            Lerne die Köpfe hinter Frulicious besser kennen.
+          </p>
         </div>
       </section>
 
