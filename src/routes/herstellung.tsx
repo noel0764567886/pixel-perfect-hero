@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Leaf, Snowflake, Utensils } from "lucide-react";
+import { Package, Snowflake, Utensils } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import ernte from "@/assets/herstellung-ernte.jpg";
 import produktion from "@/assets/herstellung-produktion.jpg";
@@ -12,6 +12,8 @@ export const Route = createFileRoute("/herstellung")({
       { name: "description", content: "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious." },
       { property: "og:title", content: "Herstellung – frulicious" },
       { property: "og:description", content: "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HerstellungPage,
@@ -20,27 +22,27 @@ export const Route = createFileRoute("/herstellung")({
 const steps = [
   {
     n: "01",
-    icon: Leaf,
-    title: "Ernte",
-    text: "Wir wählen reife, bio-zertifizierte Früchte von regionalen Betrieben aus.",
+     icon: Snowflake,
+     title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
+     text: "Einkauf, Rüstung und die Gefriertrocknung erfolgen durch unseren Produzenten Fruuna.",
     image: ernte,
-    label: "FOTO: BIO-FRUCHT",
+     label: "FOTO: GEFRIERTROCKNUNG",
   },
   {
     n: "02",
-    icon: Snowflake,
-    title: "Gefriertrocknung",
-    text: "Schonend getrocknet bei tiefen Temperaturen – Geschmack und Nährstoffe bleiben erhalten.",
+     icon: Utensils,
+     title: "Veredelung",
+     text: "Nachdem wir die gefriergetrockneten Früchte erhalten haben, werden sie von uns von Hand mit Schokoladenkuvertüre von Felchlin veredelt.",
     image: produktion,
-    label: "FOTO: HERSTELLUNG",
+     label: "FOTO: VEREDELUNG",
   },
   {
     n: "03",
-    icon: Utensils,
-    title: "Veredelung",
-    text: "Jedes Stück wird von Hand in feine Schokolade getaucht und sorgfältig verpackt.",
+     icon: Package,
+     title: "Verpacken und verkaufen",
+     text: "Wir verpacken die fertigen Früchte und stellen sie zum Verkauf bereit.",
     image: verpackung,
-    label: "FOTO: VERPACKUNG",
+     label: "FOTO: FERTIGES PRODUKT",
   },
 ];
 
@@ -50,7 +52,7 @@ function HerstellungPage() {
 
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-8">
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
-          · Von der Ernte bis zur Tüte
+           · Gefriergetrocknet und von Hand veredelt
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
           So entsteht Frulicious.

@@ -1,15 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Leaf, Package } from "lucide-react";
+import { Leaf, Hand } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 
 export const Route = createFileRoute("/nachhaltigkeit")({
   head: () => ({
     meta: [
-      { title: "Nachhaltigkeit – frulicious" },
-      { name: "description", content: "Bio-Früchte und wiederverschliessbare Verpackung – gut für dich, gut für die Erde." },
-      { property: "og:title", content: "Nachhaltigkeit – frulicious" },
-      { property: "og:description", content: "Bio-Früchte und wiederverschliessbare Verpackung – gut für dich, gut für die Erde." },
+       { title: "Bio und Handgemacht – frulicious" },
+       { name: "description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
+       { property: "og:title", content: "Bio und Handgemacht – frulicious" },
+       { property: "og:description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: NachhaltigkeitPage,
@@ -19,12 +21,12 @@ const points = [
   {
     icon: Leaf,
     title: "100% Bio-Früchte",
-    text: "Wir arbeiten ausschliesslich mit bio-zertifizierten Erzeugern zusammen.",
+     text: "Wir verwenden ausschliesslich 100% bio-zertifizierte Früchte und Schokolade.",
   },
   {
-    icon: Package,
-    title: "Wiederverschliessbare Verpackung",
-    text: "Unsere Beutel lassen sich immer wieder verschliessen – für maximale Frische ohne unnötigen Verpackungsmüll.",
+     icon: Hand,
+     title: "Handgemacht",
+     text: "Die Veredelung, Abpackung und Gestaltung unserer Verpackungen wird von uns von Hand erledigt.",
   },
 ];
 
@@ -48,10 +50,10 @@ function NachhaltigkeitPage() {
             />
             <div className="relative">
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-                · Von der Ernährlichkeit
+                 · Frulicious
               </p>
               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
-                Gut für dich.<br />Gut für die Erde.
+                 Bio und<br />Handgemacht
               </h1>
             </div>
           </div>

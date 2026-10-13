@@ -30,7 +30,7 @@ export function SiteHeader() {
       <Link to="/sorten" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Sorten</Link>
       <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Herstellung</Link>
       <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Team</Link>
-      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Nachhaltigkeit</Link>
+      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Bio und Handgemacht</Link>
       <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Kontakt</Link>
     </>
   );

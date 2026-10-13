@@ -22,6 +22,8 @@ export const Route = createFileRoute("/sorte/$slug")({
         { name: "description", content: sorte.intro },
         { property: "og:title", content: title },
         { property: "og:description", content: sorte.intro },
+         { property: "og:type", content: "website" },
+         { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },
@@ -97,26 +99,6 @@ function SortePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-16">
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16">
-          <div className="space-y-5 text-sm sm:text-base text-foreground/75 leading-relaxed">
-            <h2 className="font-display text-3xl text-foreground">Die Geschichte dahinter.</h2>
-            {sorte.story.map((p) => (
-              <p key={p.slice(0, 20)}>{p}</p>
-            ))}
-          </div>
-
-          <dl className="bg-white/70 border border-brand/10 rounded-3xl p-6 sm:p-8 h-fit divide-y divide-brand/10">
-            {sorte.facts.map((f) => (
-              <div key={f.label} className="py-3 first:pt-0 last:pb-0">
-                <dt className="text-xs tracking-[0.2em] uppercase text-brand font-medium">{f.label}</dt>
-                <dd className="mt-1 text-sm text-foreground/80">{f.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-20">
         <div className="grid sm:grid-cols-3 gap-5 lg:gap-8">
           {sorte.gallery.map((g) => (
@@ -148,7 +130,7 @@ function SortePage() {
               </div>
               <div>
                 <h3 className="font-display text-xl text-foreground group-hover:text-brand transition">{o.name}</h3>
-                <p className="mt-1 text-sm text-foreground/65 leading-relaxed">{o.description}</p>
+                 <p className="mt-1 text-sm text-foreground/65 leading-relaxed">{o.chocolate}</p>
               </div>
             </Link>
           ))}

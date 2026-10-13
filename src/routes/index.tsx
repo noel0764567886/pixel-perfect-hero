@@ -34,12 +34,12 @@ function Index() {
             Bio · Handgemacht · Gefriergetrocknet
           </p>
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.02] text-foreground font-normal">
-            Frucht trifft<br />
-            <span className="text-brand italic font-normal">Schokolade.</span>
+             Gefriergetrocknete Früchte in<br />
+             <span className="text-brand italic font-normal">Schokolade vollendet.</span>
           </h1>
           <div className="mt-8 h-[2px] w-16 bg-brand/60" />
           <p className="mt-8 text-base lg:text-lg text-foreground/70 max-w-md leading-relaxed">
-            Wir tauchen bio-zertifizierte, gefriergetrocknete Früchte von Hand in feinste Schokolade – für einen Snack, der so klar schmeckt, wie er aussieht.
+             Jede Sorte wird schonend gefriergetrocknet, um den Geschmack und Nährstoffe zu bewahren – dann von Hand mit Schokolade veredelt.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link to="/sorten" className="whitespace-nowrap rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">

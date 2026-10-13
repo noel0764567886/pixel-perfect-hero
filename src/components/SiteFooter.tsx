@@ -29,7 +29,7 @@ export function SiteFooter() {
           <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Unternehmen</p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li><Link to="/team" className="hover:text-brand transition">Team</Link></li>
-            <li><Link to="/nachhaltigkeit" className="hover:text-brand transition">Nachhaltigkeit</Link></li>
+            <li><Link to="/nachhaltigkeit" className="hover:text-brand transition">Bio und Handgemacht</Link></li>
             <li><Link to="/herstellung" className="hover:text-brand transition">Herstellung</Link></li>
             <li><Link to="/kontakt" className="hover:text-brand transition">Kontakt</Link></li>
           </ul>
