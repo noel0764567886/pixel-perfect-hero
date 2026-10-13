@@ -23,12 +23,12 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Alisha Balasubramaniam", role: "CEO" },
-  { name: "Milena Blaser", role: "CAO" },
-  { name: "Ilan Bino", role: "CFO" },
-  { name: "Ava Christener", role: "CTO" },
-  { name: "Noah Perren", role: "CMO" },
-  { name: "Arno Blank", role: "CPO" },
+  { name: "Alisha Balasubramaniam", role: "CEO", photo: teamAlisha.url },
+  { name: "Milena Blaser", role: "CAO", photo: teamMilena.url },
+  { name: "Ilan Bino", role: "CFO", photo: teamIlan.url },
+  { name: "Ava Christener", role: "CTO", photo: teamAva.url },
+  { name: "Noah Perren", role: "CMO", photo: teamNoah.url },
+  { name: "Arno Blank", role: "CPO", photo: teamArno.url },
 ];
 
 function TeamPage() {
