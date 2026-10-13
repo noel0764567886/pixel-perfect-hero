@@ -11,6 +11,8 @@ export const Route = createFileRoute("/kasse")({
       { name: "description", content: "Bestellübersicht und Lieferadresse für deine frulicious Bestellung." },
       { property: "og:title", content: "Kasse – frulicious" },
       { property: "og:description", content: "Bestellübersicht und Lieferadresse für deine frulicious Bestellung." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: KassePage,

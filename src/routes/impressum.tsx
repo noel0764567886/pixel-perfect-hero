@@ -6,6 +6,10 @@ export const Route = createFileRoute("/impressum")({
     meta: [
       { title: "Impressum – frulicious" },
       { name: "description", content: "Impressum und rechtliche Angaben zu frulicious." },
+       { property: "og:title", content: "Impressum – frulicious" },
+       { property: "og:description", content: "Impressum und rechtliche Angaben zu frulicious." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),

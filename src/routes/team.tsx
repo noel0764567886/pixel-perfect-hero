@@ -6,9 +6,11 @@ export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
       { title: "Team – frulicious" },
-      { name: "description", content: "Sechs Personen, eine Idee: die beste Frucht-Schokolade der Schweiz." },
+       { name: "description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
       { property: "og:title", content: "Team – frulicious" },
-      { property: "og:description", content: "Sechs Personen, eine Idee: die beste Frucht-Schokolade der Schweiz." },
+       { property: "og:description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: TeamPage,
@@ -34,10 +36,10 @@ function TeamPage() {
               · Die Köpfe dahinter
             </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
-              Unser Team.
+               Unser Team
             </h1>
             <p className="mt-6 text-base sm:text-lg text-foreground/70 max-w-md leading-relaxed">
-              Sechs Personen, eine Idee: die beste Frucht-Schokolade der Schweiz.
+               Lerne die Köpfe hinter Frulicious besser kennen.
             </p>
           </div>
 

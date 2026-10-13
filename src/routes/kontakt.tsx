@@ -10,6 +10,8 @@ export const Route = createFileRoute("/kontakt")({
       { name: "description", content: "Schreib uns eine Nachricht – wir melden uns so schnell wie möglich zurück." },
       { property: "og:title", content: "Kontakt – frulicious" },
       { property: "og:description", content: "Schreib uns eine Nachricht – wir melden uns so schnell wie möglich zurück." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: KontaktPage,

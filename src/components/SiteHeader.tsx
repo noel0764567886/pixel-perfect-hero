@@ -30,7 +30,7 @@ export function SiteHeader() {
       <Link to="/sorten" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Sorten</Link>
       <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Herstellung</Link>
       <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Team</Link>
-      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Nachhaltigkeit</Link>
+      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Bio und Handgemacht</Link>
       <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Kontakt</Link>
     </>
   );
@@ -45,7 +45,7 @@ export function SiteHeader() {
           <img src={logo} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
         </Link>
 
-        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-9 text-sm text-foreground/80">
+        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-5 text-sm text-foreground/80">
           {navLinks}
         </nav>
 

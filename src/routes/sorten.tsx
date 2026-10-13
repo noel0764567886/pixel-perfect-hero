@@ -12,6 +12,8 @@ export const Route = createFileRoute("/sorten")({
       { name: "description", content: "Drei Sorten gefriergetrockneter Früchte, von Hand in feinste Schokolade getaucht." },
       { property: "og:title", content: "Sorten – frulicious" },
       { property: "og:description", content: "Drei Sorten gefriergetrockneter Früchte, von Hand in feinste Schokolade getaucht." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: SortenPage,
@@ -27,10 +29,10 @@ function SortenPage() {
           · Unsere Sorten
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
-          Drei Früchte, in Schokolade<br />vollendet.
+           Gefriergetrocknete Früchte in Schokolade vollendet.
         </h1>
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
-          Jede Sorte wird schonend gefriergetrocknet, um Geschmack und Nährstoffe zu bewahren – dann von Hand in Schokolade getaucht.
+           Jede Sorte wird schonend gefriergetrocknet, um den Geschmack und Nährstoffe zu bewahren – dann von Hand mit Schokolade veredelt.
         </p>
       </section>
 
@@ -56,9 +58,6 @@ function SortenPage() {
               </Link>
               <p className="relative z-20 mt-1 text-xs tracking-[0.2em] uppercase text-brand font-medium">
                 {s.chocolate}
-              </p>
-              <p className="relative z-20 mt-4 text-sm text-foreground/70 leading-relaxed min-h-[4.5rem]">
-                {s.description}
               </p>
 
               <Link to="/sorte/$slug" params={{ slug: s.slug }} className="relative z-20 mt-4 inline-block text-sm text-brand underline underline-offset-4 hover:opacity-80 transition">
