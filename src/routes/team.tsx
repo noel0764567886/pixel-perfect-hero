@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
+import teamAlisha from "@/assets/team-alisha.jpg.asset.json";
+import teamMilena from "@/assets/team-milena.jpg.asset.json";
+import teamIlan from "@/assets/team-ilan.jpg.asset.json";
+import teamAva from "@/assets/team-ava.jpg.asset.json";
+import teamNoah from "@/assets/team-noah.jpg.asset.json";
+import teamArno from "@/assets/team-arno.jpg.asset.json";
 
 
 export const Route = createFileRoute("/team")({
