@@ -61,8 +61,13 @@ function TeamPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {team.map((m) => (
             <div key={m.name} className="flex flex-col items-center text-center">
-              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-brand-soft to-brand/40 flex items-center justify-center shadow-[0_10px_30px_-15px_rgba(180,80,100,0.4)]">
-                <span className="text-white text-xs tracking-[0.2em] font-medium">FOTO</span>
+              <div className="w-40 h-40 rounded-full overflow-hidden bg-gradient-to-br from-brand-soft to-brand/40 shadow-[0_10px_30px_-15px_rgba(180,80,100,0.4)]">
+                <img
+                  src={m.photo}
+                  alt={`Porträt von ${m.name}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <p className="mt-6 font-medium text-foreground">{m.name}</p>
               <p className="mt-1 text-xs tracking-[0.2em] uppercase text-foreground/70">{m.role}</p>
