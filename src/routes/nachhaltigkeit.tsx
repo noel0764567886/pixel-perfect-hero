@@ -21,12 +21,12 @@ const points = [
   {
     icon: Leaf,
     title: "100% Bio-Früchte",
-     text: "Wir verwenden ausschliesslich 100% bio-zertifizierte Früchte und Schokolade.",
+    text: "Für unsere Frulicious-Produkte verwenden wir ausschliesslich sorgfältig ausgewählte Früchte aus biologischem Anbau. Dabei legen wir grossen Wert auf Qualität, Natürlichkeit und einen unverfälschten Fruchtgeschmack. Bei der Gefriertrocknung wird den Früchten das Wasser entzogen, während ihr natürliches Aroma und viele wertvolle Inhaltsstoffe zu einem grossen Teil erhalten bleiben. So bilden unsere Bio-Früchte die perfekte Grundlage für unsere fruchtigen Schokoladenkreationen.",
   },
   {
-     icon: Hand,
-     title: "Handgemacht",
-     text: "Die Veredelung, Abpackung und Gestaltung unserer Verpackungen wird von uns von Hand erledigt.",
+    icon: Hand,
+    title: "Handgemacht",
+    text: "Bei Frulicious legen wir grossen Wert auf sorgfältige Handarbeit. Jedes einzelne Fruchtstück wird von unserem Team von Hand mit einer feinen Schicht Bio-Schokolade veredelt. Auch das anschliessende Abfüllen und Verpacken unserer Produkte übernehmen wir selbst. Dabei achten wir auf eine sorgfältige Verarbeitung und eine gleichbleibend hohe Qualität. So steckt in jeder Frulicious-Packung nicht nur eine besondere Kombination aus Frucht und Schokolade, sondern auch viel Zeit, Sorgfalt und Liebe zum Detail.",
   },
 ];
 
