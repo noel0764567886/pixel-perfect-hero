@@ -48,7 +48,7 @@ const steps = [
     title: "Verpacken und verkaufen",
      text: "Sobald die Schokolade getrocknet ist, wiegen wir jeweils 45 g einer Fruchtsorte ab und verpacken diese in wiederverschliessbare Standbeutel. Unsere wiederverschliessbaren Verpackungen sorgen dafür, dass die Früchte möglichst lange frisch und aromatisch bleiben. Anschliessend sind unsere Produkte bereit für den Verkauf.",
     image: verpackung,
-     label: "FOTO: FERTIGES PRODUKT",
+    caption: "Frisch verpackt im Standbeutel",
   },
 ];
 
