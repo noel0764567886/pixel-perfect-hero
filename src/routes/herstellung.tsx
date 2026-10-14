@@ -22,8 +22,10 @@ export const Route = createFileRoute("/herstellung")({
 const steps = [
   {
     n: "01",
-     icon: Snowflake,
-     title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
+    icon: Snowflake,
+    accent: "var(--rose-accent)",
+    accentSoft: "rgba(244,128,129,0.16)",
+    title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
      text: "Der erste Schritt unserer Herstellung erfolgt bei unserem Produzenten Fruuna. Dort werden sorgfältig ausgewählte Bio-Früchte eingekauft, gewaschen und für die Weiterverarbeitung vorbereitet. Anschliessend werden die Früchte in gleichmässige Stücke geschnitten und gefriergetrocknet. Bei diesem Verfahren wird den Früchten das Wasser entzogen, wodurch ihr natürlicher Geschmack und ihre wertvollen Inhaltsstoffe weitgehend erhalten bleiben. Danach werden die gefriergetrockneten Früchte an uns geliefert.",
     image: ernte,
      label: "FOTO: GEFRIERTROCKNUNG",
