@@ -54,53 +54,98 @@ const steps = [
 
 function HerstellungPage() {
   return (
-    <div className="min-h-screen bg-[rgb(253,246,243)] flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-8">
+      {/* Hero */}
+      <section className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-14 sm:pt-20 pb-10 overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-soft/50 blur-3xl"
+        />
         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
-           · Gefriergetrocknet und von Hand veredelt
+          · Gefriergetrocknet und von Hand veredelt
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
           So entsteht Frulicious.
         </h1>
+        <p className="mt-5 max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
+          In drei Schritten von der sorgfältig ausgewählten Bio-Frucht zum
+          handveredelten Genussprodukt – transparent und nah an jedem Schritt.
+        </p>
         <div className="mt-6 h-[2px] w-16 bg-brand/60" />
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-24 flex-1">
-        <div className="space-y-12">
-          {steps.map((s) => {
+      {/* Schritte */}
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-24 sm:pb-28 flex-1">
+        <div className="space-y-16 sm:space-y-24">
+          {steps.map((s, i) => {
             const Icon = s.icon;
+            const flip = i % 2 === 1;
             return (
-              <div key={s.n} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-
-                <div className="flex items-start gap-5 sm:gap-8">
-                  <span className="font-display text-4xl sm:text-5xl lg:text-6xl text-brand/70 leading-none pt-1 shrink-0">
-                    {s.n}
-                  </span>
-
-                  <div className="pt-2">
-                    <Icon className="w-7 h-7 text-foreground/70 mb-4" strokeWidth={1.5} />
-                    <h3 className="font-display text-2xl text-foreground">{s.title}</h3>
-                    <p className="mt-3 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-md">
-                      {s.text}
-                    </p>
+              <div
+                key={s.n}
+                className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center"
+              >
+                {/* Text */}
+                <div className={flip ? "md:order-2" : undefined}>
+                  <div className="flex items-start gap-5 sm:gap-7">
+                    <span
+                      className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none pt-1 shrink-0"
+                      style={{ color: s.accent }}
+                    >
+                      {s.n}
+                    </span>
+                    <div className="pt-1.5 min-w-0">
+                      <span
+                        className="inline-flex items-center justify-center w-11 h-11 rounded-full mb-4"
+                        style={{ backgroundColor: s.accentSoft }}
+                      >
+                        <Icon
+                          className="w-5 h-5"
+                          strokeWidth={1.75}
+                          style={{ color: "var(--foreground)" }}
+                        />
+                      </span>
+                      <h3 className="font-display text-2xl sm:text-[1.7rem] text-foreground leading-snug">
+                        {s.title}
+                      </h3>
+                      <div className="mt-3 mb-4 h-px w-10" style={{ backgroundColor: s.accent }} />
+                      <p className="text-sm lg:text-base text-muted-foreground leading-relaxed max-w-md">
+                        {s.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-[0_10px_40px_-15px_rgba(180,80,100,0.25)]">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-brand/30 mix-blend-multiply" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="bg-brand/90 text-white text-xs tracking-[0.2em] font-semibold px-5 py-2 rounded-full">
-                      {s.label}
-                    </span>
-                  </div>
+
+                {/* Bild */}
+                <div className={flip ? "md:order-1" : undefined}>
+                  <figure className="group">
+                    <div
+                      className="relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-[0_20px_50px_-20px_rgba(78,10,25,0.35)]"
+                    >
+                      <img
+                        src={s.image}
+                        alt={s.caption}
+                        width={1024}
+                        height={1024}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="absolute top-4 left-4 font-display text-white/95 text-sm px-4 py-1.5 rounded-full"
+                        style={{ backgroundColor: "rgba(78,10,25,0.55)", backdropFilter: "blur(4px)" }}
+                      >
+                        {s.n}
+                      </span>
+                    </div>
+                    <figcaption className="mt-4 flex items-center gap-3">
+                      <span className="h-px w-6" style={{ backgroundColor: s.accent }} />
+                      <span className="text-xs tracking-[0.18em] uppercase text-muted-foreground font-medium">
+                        {s.caption}
+                      </span>
+                    </figcaption>
+                  </figure>
                 </div>
               </div>
             );
