@@ -21,12 +21,12 @@ const points = [
   {
     icon: Leaf,
     title: "100% Bio-Früchte",
-     text: "Wir verwenden ausschliesslich 100% bio-zertifizierte Früchte und Schokolade.",
+    text: "Für unsere Frulicious-Produkte verwenden wir ausschliesslich sorgfältig ausgewählte Früchte aus biologischem Anbau. Dabei legen wir grossen Wert auf Qualität, Natürlichkeit und einen unverfälschten Fruchtgeschmack. Bei der Gefriertrocknung wird den Früchten das Wasser entzogen, während ihr natürliches Aroma und viele wertvolle Inhaltsstoffe zu einem grossen Teil erhalten bleiben. So bilden unsere Bio-Früchte die perfekte Grundlage für unsere fruchtigen Schokoladenkreationen.",
   },
   {
-     icon: Hand,
-     title: "Handgemacht",
-     text: "Die Veredelung, Abpackung und Gestaltung unserer Verpackungen wird von uns von Hand erledigt.",
+    icon: Hand,
+    title: "Handgemacht",
+    text: "Bei Frulicious legen wir grossen Wert auf sorgfältige Handarbeit. Jedes einzelne Fruchtstück wird von unserem Team von Hand mit einer feinen Schicht Bio-Schokolade veredelt. Auch das anschliessende Abfüllen und Verpacken unserer Produkte übernehmen wir selbst. Dabei achten wir auf eine sorgfältige Verarbeitung und eine gleichbleibend hohe Qualität. So steckt in jeder Frulicious-Packung nicht nur eine besondere Kombination aus Frucht und Schokolade, sondern auch viel Zeit, Sorgfalt und Liebe zum Detail.",
   },
 ];
 
@@ -34,7 +34,7 @@ function NachhaltigkeitPage() {
   return (
     <div className="min-h-screen bg-[rgb(253,246,243)] flex flex-col">
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 pb-24 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-12 sm:py-16 flex-1 flex flex-col justify-center">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left card */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-soft p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
@@ -69,7 +69,7 @@ function NachhaltigkeitPage() {
                   </span>
                   <div className="pt-1">
                     <h3 className="font-display text-2xl text-foreground">{p.title}</h3>
-                    <p className="mt-3 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-sm">
+                    <p className="mt-3 text-sm sm:text-base text-foreground/75 leading-relaxed max-w-xl">
                       {p.text}
                     </p>
                   </div>
