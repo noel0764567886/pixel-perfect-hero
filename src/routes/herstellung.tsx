@@ -24,7 +24,7 @@ const steps = [
     n: "01",
      icon: Snowflake,
      title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
-     text: "Einkauf, Rüstung und die Gefriertrocknung erfolgen durch unseren Produzenten Fruuna.",
+     text: "Der erste Schritt unserer Herstellung erfolgt bei unserem Produzenten Fruuna. Dort werden sorgfältig ausgewählte Bio-Früchte eingekauft, gewaschen und für die Weiterverarbeitung vorbereitet. Anschliessend werden die Früchte in gleichmässige Stücke geschnitten und gefriergetrocknet. Bei diesem Verfahren wird den Früchten das Wasser entzogen, wodurch ihr natürlicher Geschmack und ihre wertvollen Inhaltsstoffe weitgehend erhalten bleiben. Danach werden die gefriergetrockneten Früchte an uns geliefert.",
     image: ernte,
      label: "FOTO: GEFRIERTROCKNUNG",
   },
@@ -32,7 +32,7 @@ const steps = [
     n: "02",
      icon: Utensils,
      title: "Veredelung",
-     text: "Nachdem wir die gefriergetrockneten Früchte erhalten haben, werden sie von uns von Hand mit Schokoladenkuvertüre von Felchlin veredelt.",
+     text: "Sobald die gefriergetrockneten Früchte bei uns eintreffen, beginnt die Veredelung durch unser Frulicious-Team. In sorgfältiger Handarbeit versehen wir jedes einzelne Fruchtstück auf einer Seite mit einer feinen Schicht hochwertiger Bio-Kuvertüre von Felchlin. Dabei verwenden wir sowohl Milch- als auch Zartbitter-Kuvertüre, die wir schonend schmelzen und dann von Hand sorgfältig auf die Früchte auftragen.",
     image: produktion,
      label: "FOTO: VEREDELUNG",
   },
@@ -40,7 +40,7 @@ const steps = [
     n: "03",
      icon: Package,
      title: "Verpacken und verkaufen",
-     text: "Wir verpacken die fertigen Früchte und stellen sie zum Verkauf bereit.",
+     text: "Sobald die Schokolade getrocknet ist, wiegen wir jeweils 45 g einer Fruchtsorte ab und verpacken diese in wiederverschliessbare Standbeutel. Unsere wiederverschliessbaren Verpackungen sorgen dafür, dass die Früchte möglichst lange frisch und aromatisch bleiben. Anschliessend sind unsere Produkte bereit für den Verkauf.",
     image: verpackung,
      label: "FOTO: FERTIGES PRODUKT",
   },
@@ -75,7 +75,7 @@ function HerstellungPage() {
                   <div className="pt-2">
                     <Icon className="w-7 h-7 text-foreground/70 mb-4" strokeWidth={1.5} />
                     <h3 className="font-display text-2xl text-foreground">{s.title}</h3>
-                    <p className="mt-3 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-sm">
+                    <p className="mt-3 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-md">
                       {s.text}
                     </p>
                   </div>
