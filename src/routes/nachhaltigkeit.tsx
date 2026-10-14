@@ -69,7 +69,7 @@ function NachhaltigkeitPage() {
                   </span>
                   <div className="pt-1">
                     <h3 className="font-display text-2xl text-foreground">{p.title}</h3>
-                    <p className="mt-3 text-sm lg:text-base text-foreground/70 leading-relaxed max-w-sm">
+                    <p className="mt-3 text-sm sm:text-base text-foreground/75 leading-relaxed max-w-xl">
                       {p.text}
                     </p>
                   </div>
