@@ -76,6 +76,9 @@ function SortePage() {
               {sorte.name.charAt(0) + sorte.name.slice(1).toLowerCase()}.
             </h1>
             <p className="mt-5 text-base lg:text-lg text-foreground/70 leading-relaxed max-w-lg">{sorte.intro}</p>
+            <p className="mt-4 text-sm text-foreground/60 leading-relaxed max-w-lg">
+              <span className="font-semibold text-foreground/80">Zutaten pro 45-g-Packung:</span> {sorte.zutaten}
+            </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <span className="text-lg font-semibold text-foreground">{sorte.price}</span>
