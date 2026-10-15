@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
+import { getRequestHeader } from "@tanstack/react-start/server";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Bitte gib deinen Namen an.").max(100),
@@ -31,7 +32,11 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       return { sent: true as const };
     }
 
-    if (isRateLimited(data.email.toLowerCase())) {
+    const ip =
+      getRequestHeader("cf-connecting-ip") ??
+      getRequestHeader("x-forwarded-for")?.split(",")[0]?.trim() ??
+      "unknown";
+    if (isRateLimited(`ip:${ip}`) || isRateLimited(`mail:${data.email.toLowerCase()}`)) {
       return { sent: false as const, reason: "rate_limited" as const };
     }
 
