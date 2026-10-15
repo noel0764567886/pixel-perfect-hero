@@ -17,6 +17,26 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
   }
 });
 
+const SECURITY_HEADERS: Record<string, string> = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+  "Cross-Origin-Opener-Policy": "same-origin",
+};
+
+const securityHeadersMiddleware = createMiddleware().server(async ({ next }) => {
+  const result = await next();
+  const res = (result as { response?: Response }).response;
+  if (res instanceof Response) {
+    for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
+      try { res.headers.set(k, v); } catch { /* immutable headers */ }
+    }
+  }
+  return result;
+});
+
 export const startInstance = createStart(() => ({
-  requestMiddleware: [errorMiddleware],
+  requestMiddleware: [securityHeadersMiddleware, errorMiddleware],
 }));
