@@ -6,9 +6,9 @@ import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 export const Route = createFileRoute("/nachhaltigkeit")({
   head: () => ({
     meta: [
-       { title: "Bio und Handgemacht – frulicious" },
+       { title: "Was Frulicious besonders macht – frulicious" },
        { name: "description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
-       { property: "og:title", content: "Bio und Handgemacht – frulicious" },
+       { property: "og:title", content: "Was Frulicious besonders macht – frulicious" },
        { property: "og:description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
        { property: "og:type", content: "website" },
        { name: "twitter:card", content: "summary_large_image" },
@@ -52,9 +52,9 @@ function NachhaltigkeitPage() {
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
                  · Frulicious
               </p>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
-                 Bio und<br />Handgemacht
-              </h1>
+               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
+                 Was Frulicious<br />besonders macht
+               </h1>
             </div>
           </div>
 

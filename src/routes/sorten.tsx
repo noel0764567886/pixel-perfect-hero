@@ -23,15 +23,15 @@ function SortenPage() {
     <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
-        <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-          · Unsere Sorten
-        </p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
-           Gefriergetrocknete Früchte in Schokolade vollendet.
-        </h1>
-        <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
-           Jede Sorte wird schonend gefriergetrocknet, um den Geschmack und Nährstoffe zu bewahren – dann von Hand mit Schokolade veredelt.
-        </p>
+         <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
+           · Unser Produkt
+         </p>
+         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
+            Gefriergetrocknete Früchte in Schokolade veredelt.
+         </h1>
+         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
+            Frulicious vereint den natürlichen Geschmack sorgfältig ausgewählter Bio-Früchte mit hochwertiger Bio-Schokolade. Durch diese besondere Kombination entsteht ein einzigartiges Geschmackserlebnis, bei dem fruchtige Aromen auf feinste Schokolade treffen. Unser Sortiment umfasst drei verschiedene Fruchtsorten: Banane, Apfel und Kiwi. Jede Sorte überzeugt durch ihren individuellen Geschmack und wird mit einer passenden Schokoladenkombination verfeinert.
+         </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-24">
