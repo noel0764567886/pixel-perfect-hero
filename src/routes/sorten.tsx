@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { useCart } from "@/context/cart";
 import { sorten } from "@/lib/sorten-data";
