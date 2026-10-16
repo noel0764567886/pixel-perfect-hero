@@ -5,4 +5,4 @@
 - [x] Darstellung und Verlinkungen prüfen; Kontakt unverändert lassen.
 - [ ] Echte Produkt-, Gefriertrocknungs-, Portrait- und Teamfotos einsetzen — wartet auf die Fotos des Nutzers; bisherige Bilder bleiben erhalten.
 - [x] Warenkorb, Bestellbuttons, Produkt-Plusbuttons und Impressum inklusive nicht mehr benötigter Kasse entfernen.
-- [ ] Verbleibende Sorten-Verlinkungen und Darstellung prüfen.
+- [x] Verbleibende Sorten-Verlinkungen und Darstellung prüfen.
