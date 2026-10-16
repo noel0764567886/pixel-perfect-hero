@@ -1,11 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ShoppingBag, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useCart } from "@/context/cart";
 import logo from "@/assets/frulicious-logo.png";
 
 export function SiteHeader() {
-  const { openCart, count } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -50,22 +48,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-          <Link to="/sorten" className="hidden sm:inline-flex rounded-full bg-brand text-white px-5 sm:px-6 py-2.5 text-sm font-medium hover:bg-brand/90 transition shadow-sm">
-            Jetzt bestellen
-          </Link>
-          <button
-            type="button"
-            aria-label={count > 0 ? `Warenkorb öffnen, ${count} Artikel` : "Warenkorb öffnen"}
-            onClick={openCart}
-            className="relative text-foreground/80 hover:text-brand transition"
-          >
-            <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
-            {count > 0 && (
-              <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-brand text-white text-[10px] font-semibold flex items-center justify-center">
-                {count}
-              </span>
-            )}
-          </button>
           <button
             type="button"
             aria-label={mobileOpen ? "Menü schliessen" : "Menü öffnen"}
@@ -85,9 +67,6 @@ export function SiteHeader() {
             className="absolute top-full left-0 right-0 mt-3 mx-4 sm:mx-6 bg-white rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50"
           >
             {navLinks}
-            <Link to="/sorten" onClick={() => setMobileOpen(false)} className="sm:hidden rounded-full bg-brand text-white px-6 py-2.5 text-sm font-medium text-center hover:bg-brand/90 transition mt-2">
-              Jetzt bestellen
-            </Link>
           </nav>
         )}
       </header>
