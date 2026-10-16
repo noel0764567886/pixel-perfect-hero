@@ -11,8 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as HerstellungRouteImport } from './routes/herstellung'
-import { Route as ImpressumRouteImport } from './routes/impressum'
-import { Route as KasseRouteImport } from './routes/kasse'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as NachhaltigkeitRouteImport } from './routes/nachhaltigkeit'
 import { Route as SortenRouteImport } from './routes/sorten'
@@ -27,16 +25,6 @@ const IndexRoute = IndexRouteImport.update({
 const HerstellungRoute = HerstellungRouteImport.update({
   id: '/herstellung',
   path: '/herstellung',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImpressumRoute = ImpressumRouteImport.update({
-  id: '/impressum',
-  path: '/impressum',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KasseRoute = KasseRouteImport.update({
-  id: '/kasse',
-  path: '/kasse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -68,8 +56,6 @@ const SorteSlugRoute = SorteSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
-  '/impressum': typeof ImpressumRoute
-  '/kasse': typeof KasseRoute
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
@@ -79,8 +65,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
-  '/impressum': typeof ImpressumRoute
-  '/kasse': typeof KasseRoute
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
@@ -91,8 +75,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/herstellung': typeof HerstellungRoute
-  '/impressum': typeof ImpressumRoute
-  '/kasse': typeof KasseRoute
   '/kontakt': typeof KontaktRoute
   '/nachhaltigkeit': typeof NachhaltigkeitRoute
   '/sorten': typeof SortenRoute
@@ -104,8 +86,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/herstellung'
-    | '/impressum'
-    | '/kasse'
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
@@ -115,8 +95,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/herstellung'
-    | '/impressum'
-    | '/kasse'
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
@@ -126,8 +104,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/herstellung'
-    | '/impressum'
-    | '/kasse'
     | '/kontakt'
     | '/nachhaltigkeit'
     | '/sorten'
@@ -138,8 +114,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HerstellungRoute: typeof HerstellungRoute
-  ImpressumRoute: typeof ImpressumRoute
-  KasseRoute: typeof KasseRoute
   KontaktRoute: typeof KontaktRoute
   NachhaltigkeitRoute: typeof NachhaltigkeitRoute
   SortenRoute: typeof SortenRoute
@@ -161,20 +135,6 @@ declare module '@tanstack/react-router' {
       path: '/herstellung'
       fullPath: '/herstellung'
       preLoaderRoute: typeof HerstellungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/impressum': {
-      id: '/impressum'
-      path: '/impressum'
-      fullPath: '/impressum'
-      preLoaderRoute: typeof ImpressumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kasse': {
-      id: '/kasse'
-      path: '/kasse'
-      fullPath: '/kasse'
-      preLoaderRoute: typeof KasseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -218,8 +178,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HerstellungRoute: HerstellungRoute,
-  ImpressumRoute: ImpressumRoute,
-  KasseRoute: KasseRoute,
   KontaktRoute: KontaktRoute,
   NachhaltigkeitRoute: NachhaltigkeitRoute,
   SortenRoute: SortenRoute,
