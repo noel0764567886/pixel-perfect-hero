@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Render the shared site header once in the root layout; informational product routes have no cart or checkout dependencies, keeping removed ordering flows out of the route graph.

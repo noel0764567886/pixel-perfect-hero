@@ -12,8 +12,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { CartProvider } from "../context/cart";
-import { CartDrawer } from "../components/CartDrawer";
 import { SiteHeader } from "../components/SiteHeader";
 
 
@@ -127,15 +125,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <CartProvider>
         <a href="#inhalt" className="skip-link">Zum Inhalt springen</a>
         <SiteHeader />
         <main id="inhalt">
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
         </main>
-        <CartDrawer />
-      </CartProvider>
     </QueryClientProvider>
   );
 }

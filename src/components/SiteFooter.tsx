@@ -57,12 +57,6 @@ href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_sh
           >
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
           </a>
-          <Link
-            to="/impressum"
-            className="rounded-full border border-brand/40 text-brand px-5 py-2 text-xs font-medium hover:bg-brand hover:text-white transition"
-          >
-            Impressum
-          </Link>
         </div>
       </div>
     </footer>

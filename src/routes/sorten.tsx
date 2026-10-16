@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
-import { useCart } from "@/context/cart";
 import { sorten } from "@/lib/sorten-data";
 
 
@@ -20,7 +19,6 @@ export const Route = createFileRoute("/sorten")({
 });
 
 function SortenPage() {
-  const { addItem } = useCart();
   return (
     <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
 
@@ -87,13 +85,6 @@ function SortenPage() {
                       <span className="text-sm font-semibold text-foreground">{s.price}</span>
                       <span className="text-xs text-foreground/60">{s.weight}</span>
                     </div>
-                    <button
-                      onClick={() => addItem({ id: s.slug, name: s.name, price: parseFloat(s.price.replace(/[^0-9.]/g, "")), weight: s.weight, image: s.image })}
-                      aria-label={`${s.name} in den Warenkorb`}
-                      className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center transition-all duration-200 hover:bg-brand hover:border-brand hover:text-card active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                    >
-                      <Plus className="w-4 h-4" strokeWidth={2} />
-                    </button>
                   </div>
                 </div>
               </div>

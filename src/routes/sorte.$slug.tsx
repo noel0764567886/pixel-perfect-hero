@@ -1,7 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Plus } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
-import { useCart } from "@/context/cart";
 import { getSorte, sorten } from "@/lib/sorten-data";
 
 export const Route = createFileRoute("/sorte/$slug")({
@@ -47,7 +46,6 @@ function SorteNotFound() {
 
 function SortePage() {
   const { sorte } = Route.useLoaderData();
-  const { addItem } = useCart();
   const others = sorten.filter((s) => s.slug !== sorte.slug);
 
   return (
@@ -83,20 +81,6 @@ function SortePage() {
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <span className="text-lg font-semibold text-foreground">{sorte.price}</span>
               <span className="text-sm text-foreground/60">{sorte.weight}</span>
-              <button
-                onClick={() =>
-                  addItem({
-                    id: sorte.slug,
-                    name: sorte.name,
-                    price: parseFloat(sorte.price.replace(/[^0-9.]/g, "")),
-                    weight: sorte.weight,
-                    image: sorte.image,
-                  })
-                }
-                className="inline-flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 text-sm font-medium hover:bg-brand/90 transition shadow-md"
-              >
-                <Plus className="w-4 h-4" strokeWidth={2} /> In den Warenkorb
-              </button>
             </div>
           </div>
         </div>
