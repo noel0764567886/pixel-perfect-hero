@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Leaf, Hand } from "lucide-react";
+import { Leaf, Hand, UtensilsCrossed, Gift } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 
