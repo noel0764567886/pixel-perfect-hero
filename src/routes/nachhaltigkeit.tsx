@@ -7,7 +7,7 @@ export const Route = createFileRoute("/nachhaltigkeit")({
   head: () => ({
     meta: [
        { title: "Was Frulicious besonders macht – frulicious" },
-       { name: "description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
+       { name: "description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt – vielseitig geniessen als Snack, Topping oder Geschenk." },
        { property: "og:title", content: "Was Frulicious besonders macht – frulicious" },
        { property: "og:description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
        { property: "og:type", content: "website" },
