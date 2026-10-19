@@ -20,7 +20,7 @@ export const Route = createFileRoute("/sorten")({
 
 function SortenPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden">
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
          <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">

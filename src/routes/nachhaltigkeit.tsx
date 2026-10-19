@@ -85,7 +85,7 @@ function NachhaltigkeitPage() {
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16">
             {/* Heading */}
             <div>
-              <span className="inline-flex w-14 h-14 rounded-full bg-amber-accent/20 text-[rgb(171,110,35)] items-center justify-center">
+              <span className="inline-flex w-14 h-14 rounded-full bg-amber-accent/20 text-bordeaux items-center justify-center">
                 <UtensilsCrossed className="w-6 h-6" strokeWidth={1.5} />
               </span>
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mt-8 mb-4">
