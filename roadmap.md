@@ -1,4 +1,5 @@
 # Aufgaben
+- [ ] Umbenennung und neue Sorten-/Teamtexte aus der Textvorlage umsetzen und prüfen.
 - [x] Texte auf Startseite, Sorten, Herstellung und Team gemäss Bildnotizen ändern.
 - [x] Nachhaltigkeit in «Bio und Handgemacht» umbenennen und Verpackungstext ersetzen.
 - [x] Überflüssige Fruchtbeschreibungen entfernen; Fotos, Preise und Warenkorb erhalten.
