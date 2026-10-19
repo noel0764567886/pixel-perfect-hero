@@ -4,7 +4,7 @@ import logo from "@/assets/frulicious-logo.png";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[rgb(249,215,214)]/40 border-t border-brand/10">
+    <footer className="bg-brand-soft/40 border-t border-brand/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid grid-cols-2 md:grid-cols-6 gap-10">
         <div className="col-span-2 md:col-span-2 flex flex-col justify-between gap-6">
           <Link to="/" aria-label="frulicious Startseite">
@@ -53,7 +53,7 @@ href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_sh
             target="_blank"
             rel="noopener noreferrer external"
             aria-label="frulicious auf Instagram (öffnet in neuem Tab)"
-            className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition"
+            className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-primary-foreground transition"
           >
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
           </a>

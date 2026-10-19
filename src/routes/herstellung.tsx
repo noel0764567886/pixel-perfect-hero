@@ -133,7 +133,7 @@ function HerstellungPage() {
                       />
                       <span
                         aria-hidden="true"
-                        className="absolute top-4 left-4 font-display text-white/95 text-sm px-4 py-1.5 rounded-full"
+                        className="absolute top-4 left-4 font-display text-primary-foreground/95 text-sm px-4 py-1.5 rounded-full"
                         style={{ backgroundColor: "rgba(78,10,25,0.55)", backdropFilter: "blur(4px)" }}
                       >
                         {s.n}

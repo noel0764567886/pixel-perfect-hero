@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden flex flex-col">
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative z-10">
@@ -42,7 +42,7 @@ function Index() {
              Jede Sorte wird schonend gefriergetrocknet, um den Geschmack und Nährstoffe zu bewahren – dann von Hand mit Schokolade veredelt.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Link to="/sorten" className="whitespace-nowrap rounded-full bg-brand text-white px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
+            <Link to="/sorten" className="whitespace-nowrap rounded-full bg-brand text-primary-foreground px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md">
               Sorten entdecken
             </Link>
           </div>
@@ -72,7 +72,7 @@ function Index() {
             className="relative w-full max-w-xl mx-auto drop-shadow-2xl"
           />
 
-          <div className="absolute bottom-4 right-0 lg:right-4 bg-white rounded-full pl-3 pr-6 py-3 shadow-lg flex items-center gap-3">
+          <div className="absolute bottom-4 right-0 lg:right-4 bg-card rounded-full pl-3 pr-6 py-3 shadow-lg flex items-center gap-3">
             <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand/10 text-brand text-lg leading-none">+</span>
             <span className="text-sm font-medium text-foreground">100% Bio-Früchte</span>
           </div>

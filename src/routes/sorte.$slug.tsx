@@ -49,7 +49,7 @@ function SortePage() {
   const others = sorten.filter((s) => s.slug !== sorte.slug);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[rgb(252,238,238)] via-background to-[rgb(253,245,244)] overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden">
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-14 pb-16">
         <Link to="/sorten" className="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-brand transition">
@@ -110,7 +110,7 @@ function SortePage() {
               key={o.slug}
               to="/sorte/$slug"
               params={{ slug: o.slug }}
-              className="group flex items-center gap-5 bg-white rounded-3xl p-5 shadow-[0_10px_40px_-25px_rgba(180,80,100,0.4)] hover:shadow-[0_14px_45px_-20px_rgba(180,80,100,0.45)] transition"
+              className="group flex items-center gap-5 bg-card rounded-3xl p-5 shadow-[0_10px_40px_-25px_rgba(180,80,100,0.4)] hover:shadow-[0_14px_45px_-20px_rgba(180,80,100,0.45)] transition"
             >
               <div className="w-24 h-24 rounded-2xl bg-brand-soft flex items-center justify-center shrink-0">
                 <img src={o.image} alt={o.name} width={1024} height={1024} loading="lazy" className="w-20 h-20 object-contain" />

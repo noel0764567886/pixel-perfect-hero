@@ -64,7 +64,7 @@ export function SiteHeader() {
           <nav
             id="mobile-nav"
             aria-label="Mobile Navigation"
-            className="absolute top-full left-0 right-0 mt-3 mx-4 sm:mx-6 bg-white rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50"
+            className="absolute top-full left-0 right-0 mt-3 mx-4 sm:mx-6 bg-card rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50"
           >
             {navLinks}
           </nav>
