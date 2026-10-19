@@ -68,6 +68,17 @@ function TeamPage() {
         </div>
       </section>
 
+      <section className="border-t border-brand/15 bg-brand-soft/30">
+        <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-14 sm:py-20 grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12">
+          <h2 className="font-display text-3xl sm:text-4xl text-foreground">Über uns</h2>
+          <div className="max-w-2xl space-y-5 text-base lg:text-lg text-foreground/75 leading-relaxed">
+            <p>Wir sind sechs engagierte Schülerinnen und Schüler des Gymnasiums Kirchenfeld in Bern. Im Rahmen des YES-Projekts haben wir unser eigenes Start-up-Unternehmen Frulicious gegründet.</p>
+            <p>Unser Team vereint unterschiedliche Stärken und Fähigkeiten, die wir in den verschiedenen Bereichen unseres Unternehmens gezielt einsetzen. Gemeinsam übernehmen wir Verantwortung, entwickeln neue Ideen und arbeiten daran, unsere Ziele erfolgreich umzusetzen.</p>
+            <p>Mit Frulicious möchten wir wertvolle Erfahrungen im Unternehmertum sammeln und zeigen, was wir als junges, motiviertes Team erreichen können.</p>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </div>
   );

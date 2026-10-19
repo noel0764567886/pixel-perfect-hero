@@ -93,6 +93,16 @@ function SortenPage() {
         </div>
       </section>
 
+      <section className="border-t border-brand/15 bg-brand-soft/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-14 sm:py-20 grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12">
+          <h2 className="font-display text-3xl sm:text-4xl text-foreground">Interesse geweckt?</h2>
+          <div className="max-w-2xl space-y-5 text-base lg:text-lg text-foreground/75 leading-relaxed">
+            <p>Du möchtest Frulicious selbst probieren? Unsere Produkte findest du im Breitschlädeli im Berner Breitenrainquartier. Ausserdem sind wir am Weihnachtsmarkt in Bolligen sowie am 6. Dezember am Weihnachtsmarkt in Worb mit einem eigenen Stand vertreten.</p>
+            <p>Bei Fragen oder Interesse an unseren Produkten kannst du uns jederzeit über unser <a href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer external" className="text-brand underline underline-offset-4 hover:opacity-75">Instagram-Profil</a> kontaktieren. Wir freuen uns auf deine Nachricht!</p>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </div>
   );
