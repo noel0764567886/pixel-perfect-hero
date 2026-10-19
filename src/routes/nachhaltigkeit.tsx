@@ -80,6 +80,59 @@ function NachhaltigkeitPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24">
+        <div className="rounded-3xl border border-brand-soft bg-brand-soft/30 p-8 sm:p-12 lg:p-16">
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16">
+            {/* Heading */}
+            <div>
+              <span className="inline-flex w-14 h-14 rounded-full bg-amber-accent/20 text-[rgb(171,110,35)] items-center justify-center">
+                <UtensilsCrossed className="w-6 h-6" strokeWidth={1.5} />
+              </span>
+              <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mt-8 mb-4">
+                · Frulicious
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl leading-[1.15] text-foreground">
+                Vielseitiger<br />Genuss
+              </h2>
+            </div>
+
+            {/* Text */}
+            <div className="space-y-6 text-sm sm:text-base text-foreground/75 leading-relaxed lg:pt-2">
+              <p>
+                Frulicious lässt sich auf vielfältige Weise geniessen. Unsere schokoladenüberzogenen
+                Früchte eignen sich nicht nur als Snack für zwischendurch, sondern auch als besondere
+                Ergänzung zu verschiedenen Speisen. Ob als Topping für Müesli, Joghurt, Glace oder
+                Porridge – Frulicious verleiht zahlreichen Gerichten eine fruchtig-schokoladige Note.
+                Auch zum Verfeinern und Dekorieren von Desserts lassen sich unsere Produkte vielseitig
+                einsetzen.
+              </p>
+              <p>
+                Darüber hinaus eignet sich Frulicious hervorragend als kleines Mitbringsel oder als
+                Geschenk für besondere Anlässe. Ob als Wichtelgeschenk, Weihnachtsgeschenk oder
+                einfach als kleine Überraschung.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                {[
+                  { icon: UtensilsCrossed, label: "Müesli" },
+                  { icon: UtensilsCrossed, label: "Joghurt" },
+                  { icon: UtensilsCrossed, label: "Glace" },
+                  { icon: UtensilsCrossed, label: "Porridge" },
+                  { icon: Gift, label: "Geschenke" },
+                ].map(({ icon: Icon, label }) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-2 rounded-full border border-olive/40 bg-card px-4 py-1.5 text-sm text-foreground/80"
+                  >
+                    <Icon className="w-3.5 h-3.5 text-olive" strokeWidth={1.5} />
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </div>
   );
