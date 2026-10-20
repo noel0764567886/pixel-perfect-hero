@@ -17,7 +17,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Shop</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Sorten</p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li><Link to="/sorte/$slug" params={{ slug: "banane" }} className="hover:text-brand transition">Banane</Link></li>
             <li><Link to="/sorte/$slug" params={{ slug: "kiwi" }} className="hover:text-brand transition">Kiwi</Link></li>
