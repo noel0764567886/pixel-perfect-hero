@@ -1,12 +1,7 @@
 import banane from "@/assets/sorte-banane.png";
 import kiwi from "@/assets/sorte-kiwi.png";
 import apfel from "@/assets/sorte-apfel.png";
-import bananeFrucht from "@/assets/banane-frucht.jpg";
-import bananeSchoggi from "@/assets/banane-schoggi.jpg";
-import kiwiFrucht from "@/assets/kiwi-frucht.jpg";
-import kiwiSchoggi from "@/assets/kiwi-schoggi.jpg";
-import apfelFrucht from "@/assets/apfel-frucht.jpg";
-import apfelSchoggi from "@/assets/apfel-schoggi.jpg";
+
 
 export type Sorte = {
   slug: string;
