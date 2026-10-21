@@ -97,7 +97,7 @@ function SortePage() {
               className="group flex items-center gap-5 bg-card rounded-3xl p-5 shadow-[0_10px_40px_-25px_rgba(180,80,100,0.4)] hover:shadow-[0_14px_45px_-20px_rgba(180,80,100,0.45)] transition"
             >
               <div className="w-24 h-24 rounded-2xl bg-brand-soft flex items-center justify-center shrink-0">
-                <img src={o.image} alt={o.name} width={1024} height={1024} loading="lazy" className="w-20 h-20 object-contain" />
+                <img src={o.image} alt={`Frulicious ${o.name}`} width={768} height={1366} loading="lazy" className="w-24 h-24 rounded-2xl object-cover" />
               </div>
               <div>
                 <h3 className="font-display text-xl text-foreground group-hover:text-brand transition">{o.name}</h3>
