@@ -43,7 +43,7 @@ export function SiteFooter() {
                 frulicious@outlook.com
               </a>
             </li>
-            <li>Musterstrasse 1, 3000 Bern</li>
+            <li>Tilierstrasse 46, 3005 Bern</li>
           </ul>
         </div>
 
