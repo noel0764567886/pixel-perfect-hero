@@ -2,7 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { sorten } from "@/lib/sorten-data";
+import bananeFoto from "@/assets/sorte-banane-foto.jpg.asset.json";
+import kiwiFoto from "@/assets/sorte-kiwi-foto.jpg.asset.json";
+import apfelFoto from "@/assets/sorte-apfel-foto.jpg.asset.json";
 
+const kartenFotos: Record<string, string> = {
+  banane: bananeFoto.url,
+  kiwi: kiwiFoto.url,
+  apfel: apfelFoto.url,
+};
 
 export const Route = createFileRoute("/sorten")({
   head: () => ({
@@ -41,21 +49,19 @@ function SortenPage() {
               key={s.name}
               className="group relative flex flex-col bg-card rounded-3xl overflow-hidden pb-8 px-6 sm:px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_26px_55px_-20px_rgba(180,80,100,0.35)]"
             >
-              {/* Arch zone */}
               <Link
                 to="/sorte/$slug"
                 params={{ slug: s.slug }}
                 aria-label={`${s.name} ansehen`}
                 className="relative block h-60 sm:h-64 focus-visible:outline-none"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[78%] h-[88%] bg-brand-soft rounded-t-full transition-transform duration-500 group-hover:scale-[1.04]" />
                 <img
-                  src={s.image}
-                  alt={s.name}
-                  width={1024}
-                  height={1024}
+                  src={kartenFotos[s.slug]}
+                  alt={`Frulicious ${s.name.charAt(0) + s.name.slice(1).toLowerCase()} – Produktpackung vor der Berner Altstadt`}
+                  width={768}
+                  height={1366}
                   loading="lazy"
-                  className="absolute bottom-3 left-1/2 -translate-x-1/2 w-44 h-44 sm:w-48 sm:h-48 object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-[1.06] group-hover:-rotate-2"
+                  className="h-full w-full object-cover object-[center_65%]"
                 />
               </Link>
 
