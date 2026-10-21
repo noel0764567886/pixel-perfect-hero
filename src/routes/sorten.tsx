@@ -47,7 +47,7 @@ function SortenPage() {
           {sorten.map((s) => (
             <article
               key={s.name}
-              className="group relative flex flex-col bg-card rounded-3xl overflow-hidden pb-8 px-6 sm:px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_26px_55px_-20px_rgba(180,80,100,0.35)]"
+              className="group relative flex flex-col bg-card rounded-3xl overflow-hidden pt-6 pb-8 px-6 sm:pt-8 sm:pb-8 sm:px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_26px_55px_-20px_rgba(180,80,100,0.35)]"
             >
               <Link
                 to="/sorte/$slug"
