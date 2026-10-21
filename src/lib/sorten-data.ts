@@ -12,7 +12,6 @@ export type Sorte = {
   image: string;
   intro: string;
   zutaten: string;
-  gallery: { src: string; alt: string }[];
 };
 
 export const sorten: Sorte[] = [
