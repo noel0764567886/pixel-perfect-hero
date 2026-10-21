@@ -86,22 +86,6 @@ function SortePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-20">
-        <div className="grid sm:grid-cols-3 gap-5 lg:gap-8">
-          {sorte.gallery.map((g) => (
-            <img
-              key={g.src}
-              src={g.src}
-              alt={g.alt}
-              width={1024}
-              height={768}
-              loading="lazy"
-              className="w-full aspect-[4/3] object-contain sm:object-cover rounded-3xl bg-brand-soft/40 shadow-[0_10px_40px_-20px_rgba(180,80,100,0.35)]"
-            />
-          ))}
-        </div>
-      </section>
-
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-24">
         <h2 className="font-display text-3xl text-foreground mb-8">Weitere Sorten.</h2>
         <div className="grid sm:grid-cols-2 gap-6">
