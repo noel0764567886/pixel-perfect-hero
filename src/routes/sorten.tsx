@@ -61,7 +61,7 @@ function SortenPage() {
                   width={768}
                   height={1366}
                   loading="lazy"
-                  className="h-full w-full object-cover object-[center_65%]"
+                  className="h-full w-full rounded-3xl object-cover object-[center_65%]"
                 />
               </Link>
 
