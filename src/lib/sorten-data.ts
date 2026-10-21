@@ -1,6 +1,6 @@
-import banane from "@/assets/sorte-banane.png";
-import kiwi from "@/assets/sorte-kiwi.png";
-import apfel from "@/assets/sorte-apfel.png";
+import banane from "@/assets/sorte-banane-detail.jpg.asset.json";
+import kiwi from "@/assets/sorte-kiwi-detail.jpg.asset.json";
+import apfel from "@/assets/sorte-apfel-detail.jpg.asset.json";
 
 
 export type Sorte = {

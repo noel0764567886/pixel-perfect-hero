@@ -58,13 +58,13 @@ function SortePage() {
 
         <div className="mt-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="relative flex justify-center">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[85%] bg-brand-soft rounded-t-full" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[82%] h-[92%] bg-brand-soft rounded-t-full" />
             <img
               src={sorte.image}
-              alt={sorte.name}
-              width={1024}
-              height={1024}
-              className="relative w-64 sm:w-80 h-auto object-contain drop-shadow-xl"
+              alt={`Frulicious ${sorte.name.charAt(0) + sorte.name.slice(1).toLowerCase()} – Produktpackung vor der Berner Altstadt`}
+              width={768}
+              height={1366}
+              className="relative w-64 sm:w-80 h-auto rounded-3xl shadow-[0_20px_50px_-20px_rgba(78,10,25,0.35)]"
             />
           </div>
 
