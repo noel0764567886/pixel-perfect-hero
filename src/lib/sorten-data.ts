@@ -25,11 +25,6 @@ export const sorten: Sorte[] = [
     intro:
       "Entdecke die perfekte Kombination aus den natürlichen, süssen Bio-Bananen und Bio-Zartbitterkuvertüre (60% Kakaanteil). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Bananen weitgehend erhalten. Anschliessend werden die Bananenscheiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Banane (75,27 %), Bio-Zartbitterkuvertüre (24,73 %)",
-    gallery: [
-      { src: bananeFrucht, alt: "Frische Bio-Bananen vor rosa Hintergrund" },
-      { src: bananeSchoggi, alt: "Gefriergetrocknete Bananenscheibe wird in dunkle Schokolade getaucht" },
-      { src: banane, alt: "Frulicious Banane in dunkler Schokolade" },
-    ],
   },
   {
     slug: "kiwi",
