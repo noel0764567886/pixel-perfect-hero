@@ -36,11 +36,6 @@ export const sorten: Sorte[] = [
     intro:
       "Entdecke die besondere Kombination aus dem erfrischenden, säuerlichen Geschmack unserer Bio-Kiwis und Bio-Milchkuvertüre (40% Kakaanteil). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Kiwis weitgehend erhalten. Anschliessend werden die Kiwischeiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Kiwi (75.27 %), Bio-Milchkuvertüre (24,73 %)",
-    gallery: [
-      { src: kiwiFrucht, alt: "Frische Kiwis, ganz und halbiert" },
-      { src: kiwiSchoggi, alt: "Kiwischeiben in Milchschokolade auf einem Teller" },
-      { src: kiwi, alt: "Frulicious Kiwi in Milchschokolade" },
-    ],
   },
   {
     slug: "apfel",
@@ -52,11 +47,6 @@ export const sorten: Sorte[] = [
     intro:
       "Geniesse das harmonische Zusammenspiel aus dem fruchtigen, süß-säuerlichen Geschmack unserer Bio-Äpfel und einer Mischung aus Bio-Milch- und Bio-Zartbitterkuvertüre (60 % Kakaanteil bei der Zartbitterkuvertüre & 40% Kakaanteil bei der Milchkuvertüre). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Äpfel weitgehend erhalten. Anschliessend werden die Apfelscheiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Apfel (38,09 %), Bio-Zartbitterkuvertüre (30,995 %), Bio-Milchkuvertüre (30,955 %)",
-    gallery: [
-      { src: apfelFrucht, alt: "Frische rote Äpfel, ganz und aufgeschnitten" },
-      { src: apfelSchoggi, alt: "Apfelringe in Schokolade auf einem Teller" },
-      { src: apfel, alt: "Frulicious Apfel in dunkler Schokolade und Milchschokolade" },
-    ],
   },
 ];
 
