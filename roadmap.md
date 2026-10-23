@@ -5,3 +5,4 @@
 - [x] Alle Bilder als lokale Projektdateien in src/assets/ hinterlegt.
 - [x] Code-Cleanup: unbenutzter Code, veraltete Dateien und Formatierungsfehler entfernt.
 - [x] Alle Seiten auf Designfehler prüfen und Abstände, Kontraste sowie schmale Ansichten korrigieren.
+- [x] Entbehrliche Plattform- und KI-Reste aus dem Code entfernen.
