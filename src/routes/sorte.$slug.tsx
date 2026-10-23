@@ -40,7 +40,7 @@ function SorteNotFound() {
     <div className="min-h-screen bg-background flex flex-col">
       <section className="mx-auto max-w-3xl w-full px-4 sm:px-6 lg:px-10 py-24 flex-1">
         <h1 className="font-display text-4xl text-foreground">Diese Sorte gibt es nicht.</h1>
-        <Link to="/sorten" className="mt-6 inline-block text-brand underline underline-offset-4">
+        <Link to="/sorten" className="mt-6 inline-block text-primary underline underline-offset-4">
           Zurück zu allen Sorten
         </Link>
       </section>
@@ -58,7 +58,7 @@ function SortePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-10 lg:pt-14 pb-16">
         <Link
           to="/sorten"
-          className="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-brand transition"
+          className="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-primary transition"
         >
           <ArrowLeft className="w-4 h-4" strokeWidth={1.5} /> Alle Sorten
         </Link>
@@ -75,7 +75,7 @@ function SortePage() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
+            <p className="text-xs uppercase text-primary font-medium mb-4">
               · {sorte.chocolate}
             </p>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
@@ -118,7 +118,7 @@ function SortePage() {
                 />
               </div>
               <div className="min-w-0">
-                <h3 className="font-display text-xl text-foreground group-hover:text-brand transition">
+                <h3 className="font-display text-xl text-foreground group-hover:text-primary transition">
                   {o.name}
                 </h3>
                 <p className="mt-1 text-sm text-foreground/65 leading-relaxed">{o.chocolate}</p>

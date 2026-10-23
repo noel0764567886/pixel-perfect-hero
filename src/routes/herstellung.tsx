@@ -68,7 +68,7 @@ function HerstellungPage() {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Hero */}
       <section className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-14 sm:pt-20 pb-10 overflow-hidden">
-        <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
+        <p className="text-xs uppercase text-primary font-medium mb-4">
           · Gefriergetrocknet und von Hand veredelt
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
@@ -138,7 +138,7 @@ function HerstellungPage() {
                     </div>
                     <figcaption className="mt-4 flex items-center gap-3">
                       <span className={`h-px w-6 shrink-0 ${s.rule}`} />
-                      <span className="text-xs tracking-[0.18em] uppercase text-muted-foreground font-medium">
+                      <span className="text-xs uppercase text-muted-foreground font-medium">
                         {s.caption}
                       </span>
                     </figcaption>

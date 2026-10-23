@@ -35,7 +35,7 @@ function TeamPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-10 sm:pt-16 pb-8">
         <div>
-          <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
+          <p className="text-xs uppercase text-primary font-medium mb-6">
             · Die Köpfe dahinter
           </p>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
@@ -60,7 +60,7 @@ function TeamPage() {
                 />
               </div>
               <p className="mt-6 font-medium text-foreground">{m.name}</p>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-foreground/70">{m.role}</p>
+              <p className="mt-1 text-xs uppercase text-foreground/70">{m.role}</p>
             </div>
           ))}
         </div>

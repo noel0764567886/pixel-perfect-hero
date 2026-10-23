@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
 
         <div className="min-w-0">
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">
             Sorten
           </p>
           <ul className="space-y-2 text-sm text-foreground/70">
@@ -23,7 +23,7 @@ export function SiteFooter() {
               <Link
                 to="/sorte/$slug"
                 params={{ slug: "banane" }}
-                className="hover:text-brand transition"
+                className="hover:text-primary transition"
               >
                 Banane
               </Link>
@@ -32,7 +32,7 @@ export function SiteFooter() {
               <Link
                 to="/sorte/$slug"
                 params={{ slug: "kiwi" }}
-                className="hover:text-brand transition"
+                className="hover:text-primary transition"
               >
                 Kiwi
               </Link>
@@ -41,7 +41,7 @@ export function SiteFooter() {
               <Link
                 to="/sorte/$slug"
                 params={{ slug: "apfel" }}
-                className="hover:text-brand transition"
+                className="hover:text-primary transition"
               >
                 Apfel
               </Link>
@@ -50,22 +50,22 @@ export function SiteFooter() {
         </div>
 
         <div className="min-w-0">
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">
             Unternehmen
           </p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li>
-              <Link to="/team" className="hover:text-brand transition">
+              <Link to="/team" className="hover:text-primary transition">
                 Team
               </Link>
             </li>
             <li>
-              <Link to="/nachhaltigkeit" className="hover:text-brand transition">
+              <Link to="/nachhaltigkeit" className="hover:text-primary transition">
                 Was Frulicious besonders macht
               </Link>
             </li>
             <li>
-              <Link to="/herstellung" className="hover:text-brand transition">
+              <Link to="/herstellung" className="hover:text-primary transition">
                 Herstellung
               </Link>
             </li>
@@ -73,7 +73,7 @@ export function SiteFooter() {
         </div>
 
         <div className="col-span-2 md:col-span-1 min-w-0">
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">
             Kontakt
           </p>
           <ul className="space-y-2 text-sm text-foreground/70">
@@ -92,7 +92,7 @@ export function SiteFooter() {
             target="_blank"
             rel="noopener noreferrer external"
             aria-label="frulicious auf Instagram (öffnet in neuem Tab)"
-            className="w-10 h-10 rounded-full border border-brand/30 text-brand flex items-center justify-center hover:bg-brand hover:text-primary-foreground transition"
+            className="w-10 h-10 rounded-full border border-brand/30 text-primary flex items-center justify-center hover:bg-brand hover:text-primary-foreground transition"
           >
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
           </a>

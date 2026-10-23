@@ -38,7 +38,7 @@ function SortenPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
-        <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
+        <p className="text-xs uppercase text-primary font-medium mb-6">
           · Unser Produkt
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
@@ -82,7 +82,7 @@ function SortenPage() {
                   <Link
                     to="/sorte/$slug"
                     params={{ slug: s.slug }}
-                    className="transition-colors hover:text-brand"
+                    className="transition-colors hover:text-primary"
                   >
                     {s.name}
                   </Link>
@@ -133,7 +133,7 @@ function SortenPage() {
                 href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_share_sheet"
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="text-brand underline underline-offset-4 hover:opacity-75"
+                className="text-primary underline underline-offset-4 hover:opacity-75"
               >
                 Instagram-Profil
               </a>{" "}

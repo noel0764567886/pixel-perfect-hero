@@ -83,7 +83,7 @@ function Index() {
           />
 
           <div className="absolute bottom-4 right-0 lg:right-4 bg-card rounded-full pl-3 pr-6 py-3 shadow-lg flex items-center gap-3">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand/10 text-brand text-lg leading-none">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand/10 text-primary text-lg leading-none">
               +
             </span>
             <span className="text-sm font-medium text-foreground">100% Bio-Früchte</span>
