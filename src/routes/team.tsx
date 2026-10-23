@@ -38,7 +38,7 @@ function TeamPage() {
           <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
             · Die Köpfe dahinter
           </p>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
             Unser Team
           </h1>
           <p className="mt-6 text-base sm:text-lg text-foreground/70 max-w-md leading-relaxed">
@@ -51,7 +51,7 @@ function TeamPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {team.map((m) => (
             <div key={m.name} className="flex flex-col items-center text-center">
-              <div className="w-40 h-40 rounded-full overflow-hidden bg-gradient-to-br from-brand-soft to-brand/40 shadow-[0_10px_30px_-15px_rgba(180,80,100,0.4)]">
+              <div className="w-40 h-40 rounded-full overflow-hidden bg-brand-soft shadow-product">
                 <img
                   src={m.photo}
                   alt={`Porträt von ${m.name}`}
