@@ -25,11 +25,38 @@ export function SiteHeader() {
 
   const navLinks = (
     <>
-      <Link to="/sorten" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Sorten</Link>
-      <Link to="/herstellung" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Herstellung</Link>
-      <Link to="/team" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Team</Link>
-      <Link to="/nachhaltigkeit" onClick={() => setMobileOpen(false)} className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium" activeProps={{ "aria-current": "page" }}>Was Frulicious besonders macht</Link>
-
+      <Link
+        to="/sorten"
+        onClick={() => setMobileOpen(false)}
+        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        activeProps={{ "aria-current": "page" }}
+      >
+        Sorten
+      </Link>
+      <Link
+        to="/herstellung"
+        onClick={() => setMobileOpen(false)}
+        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        activeProps={{ "aria-current": "page" }}
+      >
+        Herstellung
+      </Link>
+      <Link
+        to="/team"
+        onClick={() => setMobileOpen(false)}
+        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        activeProps={{ "aria-current": "page" }}
+      >
+        Team
+      </Link>
+      <Link
+        to="/nachhaltigkeit"
+        onClick={() => setMobileOpen(false)}
+        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        activeProps={{ "aria-current": "page" }}
+      >
+        Was Frulicious besonders macht
+      </Link>
     </>
   );
 
@@ -43,7 +70,10 @@ export function SiteHeader() {
           <img src={logo} alt="frulicious Logo" className="h-12 sm:h-14 w-auto" />
         </Link>
 
-        <nav aria-label="Hauptnavigation" className="hidden lg:flex items-center gap-5 text-sm text-foreground/80">
+        <nav
+          aria-label="Hauptnavigation"
+          className="hidden lg:flex items-center gap-5 text-sm text-foreground/80"
+        >
           {navLinks}
         </nav>
 
@@ -56,7 +86,11 @@ export function SiteHeader() {
             onClick={() => setMobileOpen((v) => !v)}
             className="lg:hidden text-foreground/80 hover:text-brand transition"
           >
-            {mobileOpen ? <X className="w-6 h-6" strokeWidth={1.5} /> : <Menu className="w-6 h-6" strokeWidth={1.5} />}
+            {mobileOpen ? (
+              <X className="w-6 h-6" strokeWidth={1.5} />
+            ) : (
+              <Menu className="w-6 h-6" strokeWidth={1.5} />
+            )}
           </button>
         </div>
 

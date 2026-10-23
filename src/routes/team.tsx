@@ -7,16 +7,15 @@ import teamAva from "@/assets/team-ava.jpg";
 import teamNoah from "@/assets/team-noah.jpg";
 import teamArno from "@/assets/team-arno.jpg";
 
-
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
       { title: "Team – frulicious" },
-       { name: "description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
+      { name: "description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
       { property: "og:title", content: "Team – frulicious" },
-       { property: "og:description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
-       { property: "og:type", content: "website" },
-       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:description", content: "Lerne die Köpfe hinter Frulicious besser kennen." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: TeamPage,
@@ -34,7 +33,6 @@ const team = [
 function TeamPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-10 sm:pt-16 pb-8">
         <div>
           <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
@@ -72,9 +70,21 @@ function TeamPage() {
         <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-14 sm:py-20 grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12">
           <h2 className="font-display text-3xl sm:text-4xl text-foreground">Über uns</h2>
           <div className="max-w-2xl space-y-5 text-base lg:text-lg text-foreground/75 leading-relaxed">
-            <p>Wir sind sechs engagierte Schülerinnen und Schüler des Gymnasiums Kirchenfeld in Bern. Im Rahmen des YES-Projekts haben wir unser eigenes Start-up-Unternehmen Frulicious gegründet.</p>
-            <p>Unser Team vereint unterschiedliche Stärken und Fähigkeiten, die wir in den verschiedenen Bereichen unseres Unternehmens gezielt einsetzen. Gemeinsam übernehmen wir Verantwortung, entwickeln neue Ideen und arbeiten daran, unsere Ziele erfolgreich umzusetzen.</p>
-            <p>Mit Frulicious möchten wir wertvolle Erfahrungen im Unternehmertum sammeln und zeigen, was wir als junges, motiviertes Team erreichen können.</p>
+            <p>
+              Wir sind sechs engagierte Schülerinnen und Schüler des Gymnasiums Kirchenfeld in Bern.
+              Im Rahmen des YES-Projekts haben wir unser eigenes Start-up-Unternehmen Frulicious
+              gegründet.
+            </p>
+            <p>
+              Unser Team vereint unterschiedliche Stärken und Fähigkeiten, die wir in den
+              verschiedenen Bereichen unseres Unternehmens gezielt einsetzen. Gemeinsam übernehmen
+              wir Verantwortung, entwickeln neue Ideen und arbeiten daran, unsere Ziele erfolgreich
+              umzusetzen.
+            </p>
+            <p>
+              Mit Frulicious möchten wir wertvolle Erfahrungen im Unternehmertum sammeln und zeigen,
+              was wir als junges, motiviertes Team erreichen können.
+            </p>
           </div>
         </div>
       </section>

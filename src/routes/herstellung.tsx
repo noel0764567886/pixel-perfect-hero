@@ -9,11 +9,19 @@ export const Route = createFileRoute("/herstellung")({
   head: () => ({
     meta: [
       { title: "Herstellung – frulicious" },
-      { name: "description", content: "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious." },
+      {
+        name: "description",
+        content:
+          "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious.",
+      },
       { property: "og:title", content: "Herstellung – frulicious" },
-      { property: "og:description", content: "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious." },
-       { property: "og:type", content: "website" },
-       { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:description",
+        content:
+          "Von der Ernte über die Gefriertrocknung bis zur Veredelung – so entsteht Frulicious.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HerstellungPage,
@@ -26,7 +34,7 @@ const steps = [
     accent: "var(--rose-accent)",
     accentSoft: "rgba(244,128,129,0.16)",
     title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
-     text: "Der erste Schritt unserer Herstellung erfolgt bei unserem Produzenten Fruuna. Dort werden sorgfältig ausgewählte Bio-Früchte eingekauft, gewaschen und für die Weiterverarbeitung vorbereitet. Anschliessend werden die Früchte in gleichmässige Stücke geschnitten und gefriergetrocknet. Bei diesem Verfahren wird den Früchten das Wasser entzogen, wodurch ihr natürlicher Geschmack und ihre wertvollen Inhaltsstoffe weitgehend erhalten bleiben. Danach werden die gefriergetrockneten Früchte an uns geliefert.",
+    text: "Der erste Schritt unserer Herstellung erfolgt bei unserem Produzenten Fruuna. Dort werden sorgfältig ausgewählte Bio-Früchte eingekauft, gewaschen und für die Weiterverarbeitung vorbereitet. Anschliessend werden die Früchte in gleichmässige Stücke geschnitten und gefriergetrocknet. Bei diesem Verfahren wird den Früchten das Wasser entzogen, wodurch ihr natürlicher Geschmack und ihre wertvollen Inhaltsstoffe weitgehend erhalten bleiben. Danach werden die gefriergetrockneten Früchte an uns geliefert.",
     image: ernte,
     caption: "Gefriertrocknung bei Fruuna",
   },
@@ -36,7 +44,7 @@ const steps = [
     accent: "var(--olive)",
     accentSoft: "rgba(171,171,145,0.18)",
     title: "Veredelung",
-     text: "Sobald die gefriergetrockneten Früchte bei uns eintreffen, beginnt die Veredelung durch unser Frulicious-Team. In sorgfältiger Handarbeit versehen wir jedes einzelne Fruchtstück auf einer Seite mit einer feinen Schicht hochwertiger Bio-Kuvertüre von Felchlin. Dabei verwenden wir sowohl Milch- als auch Zartbitter-Kuvertüre, die wir schonend schmelzen und dann von Hand sorgfältig auf die Früchte auftragen.",
+    text: "Sobald die gefriergetrockneten Früchte bei uns eintreffen, beginnt die Veredelung durch unser Frulicious-Team. In sorgfältiger Handarbeit versehen wir jedes einzelne Fruchtstück auf einer Seite mit einer feinen Schicht hochwertiger Bio-Kuvertüre von Felchlin. Dabei verwenden wir sowohl Milch- als auch Zartbitter-Kuvertüre, die wir schonend schmelzen und dann von Hand sorgfältig auf die Früchte auftragen.",
     image: produktion,
     caption: "Handveredelung mit Felchlin-Kuvertüre",
   },
@@ -46,7 +54,7 @@ const steps = [
     accent: "var(--amber-accent)",
     accentSoft: "rgba(231,171,101,0.18)",
     title: "Verpacken und verkaufen",
-     text: "Sobald die Schokolade getrocknet ist, wiegen wir jeweils 45 g einer Fruchtsorte ab und verpacken diese in wiederverschliessbare Standbeutel. Unsere wiederverschliessbaren Verpackungen sorgen dafür, dass die Früchte möglichst lange frisch und aromatisch bleiben. Anschliessend sind unsere Produkte bereit für den Verkauf.",
+    text: "Sobald die Schokolade getrocknet ist, wiegen wir jeweils 45 g einer Fruchtsorte ab und verpacken diese in wiederverschliessbare Standbeutel. Unsere wiederverschliessbaren Verpackungen sorgen dafür, dass die Früchte möglichst lange frisch und aromatisch bleiben. Anschliessend sind unsere Produkte bereit für den Verkauf.",
     image: verpackung,
     caption: "Frisch verpackt im Standbeutel",
   },
@@ -55,7 +63,6 @@ const steps = [
 function HerstellungPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-
       {/* Hero */}
       <section className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-14 sm:pt-20 pb-10 overflow-hidden">
         <div
@@ -69,8 +76,8 @@ function HerstellungPage() {
           So entsteht Frulicious.
         </h1>
         <p className="mt-5 max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
-          In drei Schritten von der sorgfältig ausgewählten Bio-Frucht zum
-          handveredelten Genussprodukt – transparent und nah an jedem Schritt.
+          In drei Schritten von der sorgfältig ausgewählten Bio-Frucht zum handveredelten
+          Genussprodukt – transparent und nah an jedem Schritt.
         </p>
         <div className="mt-6 h-[2px] w-16 bg-brand/60" />
       </section>
@@ -82,10 +89,7 @@ function HerstellungPage() {
             const Icon = s.icon;
             const flip = i % 2 === 1;
             return (
-              <div
-                key={s.n}
-                className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center"
-              >
+              <div key={s.n} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
                 {/* Text */}
                 <div className={flip ? "md:order-2" : undefined}>
                   <div className="flex items-start gap-5 sm:gap-7">
@@ -120,9 +124,7 @@ function HerstellungPage() {
                 {/* Bild */}
                 <div className={flip ? "md:order-1" : undefined}>
                   <figure className="group">
-                    <div
-                      className="relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-[0_20px_50px_-20px_rgba(78,10,25,0.35)]"
-                    >
+                    <div className="relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-[0_20px_50px_-20px_rgba(78,10,25,0.35)]">
                       <img
                         src={s.image}
                         alt={s.caption}
@@ -134,7 +136,10 @@ function HerstellungPage() {
                       <span
                         aria-hidden="true"
                         className="absolute top-4 left-4 font-display text-primary-foreground/95 text-sm px-4 py-1.5 rounded-full"
-                        style={{ backgroundColor: "rgba(78,10,25,0.55)", backdropFilter: "blur(4px)" }}
+                        style={{
+                          backgroundColor: "rgba(78,10,25,0.55)",
+                          backdropFilter: "blur(4px)",
+                        }}
                       >
                         {s.n}
                       </span>
