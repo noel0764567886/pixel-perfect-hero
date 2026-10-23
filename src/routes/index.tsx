@@ -69,7 +69,7 @@ function Index() {
             alt="Gefriergetrocknete Früchte in Schokolade"
             width={1024}
             height={1024}
-            className="relative w-full max-w-xl mx-auto drop-shadow-2xl"
+            className="relative w-full max-w-lg mx-auto aspect-[4/5] object-cover drop-shadow-2xl rounded-3xl"
           />
 
           <div className="absolute bottom-4 right-0 lg:right-4 bg-card rounded-full pl-3 pr-6 py-3 shadow-lg flex items-center gap-3">
