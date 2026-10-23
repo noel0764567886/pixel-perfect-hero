@@ -34,8 +34,7 @@ function Index() {
             Bio · Handgemacht · Gefriergetrocknet
           </p>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground font-normal">
-            Gefriergetrocknete Früchte in
-            {" "}
+            Gefriergetrocknete Früchte in{" "}
             <span className="text-primary italic font-normal">Schokolade vollendet.</span>
           </h1>
           <div className="mt-8 h-[2px] w-16 bg-brand/60" />

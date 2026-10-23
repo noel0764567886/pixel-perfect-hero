@@ -15,9 +15,7 @@ export function SiteFooter() {
         </div>
 
         <div className="min-w-0">
-          <p className="text-xs uppercase text-foreground font-semibold mb-4">
-            Sorten
-          </p>
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">Sorten</p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li>
               <Link
@@ -50,9 +48,7 @@ export function SiteFooter() {
         </div>
 
         <div className="min-w-0">
-          <p className="text-xs uppercase text-foreground font-semibold mb-4">
-            Unternehmen
-          </p>
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">Unternehmen</p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li>
               <Link to="/team" className="hover:text-primary transition">
@@ -73,12 +69,13 @@ export function SiteFooter() {
         </div>
 
         <div className="col-span-2 md:col-span-1 min-w-0">
-          <p className="text-xs uppercase text-foreground font-semibold mb-4">
-            Kontakt
-          </p>
+          <p className="text-xs uppercase text-foreground font-semibold mb-4">Kontakt</p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li>
-              <a href="mailto:frulicious@outlook.com" className="hover:text-primary transition break-words">
+              <a
+                href="mailto:frulicious@outlook.com"
+                className="hover:text-primary transition break-words"
+              >
                 frulicious@outlook.com
               </a>
             </li>

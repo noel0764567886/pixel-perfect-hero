@@ -54,9 +54,7 @@ function NachhaltigkeitPage() {
               className="absolute inset-0 w-full h-full object-cover opacity-70 mix-blend-multiply pointer-events-none"
             />
             <div className="relative">
-              <p className="text-xs uppercase text-primary font-medium mb-6">
-                · Frulicious
-              </p>
+              <p className="text-xs uppercase text-primary font-medium mb-6">· Frulicious</p>
               <h1 className="font-display text-3xl sm:text-4xl leading-[1.15] text-foreground max-w-md">
                 Was Frulicious besonders macht
               </h1>
@@ -68,14 +66,17 @@ function NachhaltigkeitPage() {
             {points.map((p) => {
               const Icon = p.icon;
               return (
-                <div key={p.title} className="grid grid-cols-[2.75rem_1fr] sm:grid-cols-[3.5rem_1fr] gap-x-4 sm:gap-x-6 gap-y-3">
+                <div
+                  key={p.title}
+                  className="grid grid-cols-[2.75rem_1fr] sm:grid-cols-[3.5rem_1fr] gap-x-4 sm:gap-x-6 gap-y-3"
+                >
                   <span className="shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-full border border-brand/30 text-primary flex items-center justify-center">
                     <Icon className="w-6 h-6" strokeWidth={1.5} />
                   </span>
                   <h2 className="self-center font-display text-2xl text-foreground">{p.title}</h2>
-                    <p className="col-span-2 sm:col-span-1 sm:col-start-2 text-base text-muted-foreground leading-relaxed max-w-xl">
-                      {p.text}
-                    </p>
+                  <p className="col-span-2 sm:col-span-1 sm:col-start-2 text-base text-muted-foreground leading-relaxed max-w-xl">
+                    {p.text}
+                  </p>
                 </div>
               );
             })}

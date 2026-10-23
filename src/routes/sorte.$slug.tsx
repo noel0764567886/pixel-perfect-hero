@@ -75,9 +75,7 @@ function SortePage() {
           </div>
 
           <div>
-            <p className="text-xs uppercase text-primary font-medium mb-4">
-              · {sorte.chocolate}
-            </p>
+            <p className="text-xs uppercase text-primary font-medium mb-4">· {sorte.chocolate}</p>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
               {sorte.name.charAt(0) + sorte.name.slice(1).toLowerCase()}.
             </h1>
