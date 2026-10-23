@@ -31,8 +31,9 @@ const steps = [
   {
     n: "01",
     icon: Snowflake,
-    accent: "var(--rose-accent)",
-    accentSoft: "rgba(244,128,129,0.16)",
+    accent: "text-rose-accent",
+    accentSoft: "bg-rose-accent/15",
+    rule: "bg-rose-accent",
     title: "Fruuna – Einkauf, Rüstung, Gefriertrocknung",
     text: "Der erste Schritt unserer Herstellung erfolgt bei unserem Produzenten Fruuna. Dort werden sorgfältig ausgewählte Bio-Früchte eingekauft, gewaschen und für die Weiterverarbeitung vorbereitet. Anschliessend werden die Früchte in gleichmässige Stücke geschnitten und gefriergetrocknet. Bei diesem Verfahren wird den Früchten das Wasser entzogen, wodurch ihr natürlicher Geschmack und ihre wertvollen Inhaltsstoffe weitgehend erhalten bleiben. Danach werden die gefriergetrockneten Früchte an uns geliefert.",
     image: ernte,
@@ -41,8 +42,9 @@ const steps = [
   {
     n: "02",
     icon: Utensils,
-    accent: "var(--olive)",
-    accentSoft: "rgba(171,171,145,0.18)",
+    accent: "text-olive",
+    accentSoft: "bg-olive/20",
+    rule: "bg-olive",
     title: "Veredelung",
     text: "Sobald die gefriergetrockneten Früchte bei uns eintreffen, beginnt die Veredelung durch unser Frulicious-Team. In sorgfältiger Handarbeit versehen wir jedes einzelne Fruchtstück auf einer Seite mit einer feinen Schicht hochwertiger Bio-Kuvertüre von Felchlin. Dabei verwenden wir sowohl Milch- als auch Zartbitter-Kuvertüre, die wir schonend schmelzen und dann von Hand sorgfältig auf die Früchte auftragen.",
     image: produktion,
@@ -51,8 +53,9 @@ const steps = [
   {
     n: "03",
     icon: Package,
-    accent: "var(--amber-accent)",
-    accentSoft: "rgba(231,171,101,0.18)",
+    accent: "text-amber-accent",
+    accentSoft: "bg-amber-accent/20",
+    rule: "bg-amber-accent",
     title: "Verpacken und verkaufen",
     text: "Sobald die Schokolade getrocknet ist, wiegen wir jeweils 45 g einer Fruchtsorte ab und verpacken diese in wiederverschliessbare Standbeutel. Unsere wiederverschliessbaren Verpackungen sorgen dafür, dass die Früchte möglichst lange frisch und aromatisch bleiben. Anschliessend sind unsere Produkte bereit für den Verkauf.",
     image: verpackung,
@@ -65,11 +68,7 @@ function HerstellungPage() {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Hero */}
       <section className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-14 sm:pt-20 pb-10 overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-soft/50 blur-3xl"
-        />
-        <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-4">
+        <p className="text-xs uppercase text-primary font-medium mb-4">
           · Gefriergetrocknet und von Hand veredelt
         </p>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
@@ -92,61 +91,51 @@ function HerstellungPage() {
               <div key={s.n} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
                 {/* Text */}
                 <div className={flip ? "md:order-2" : undefined}>
-                  <div className="flex items-start gap-5 sm:gap-7">
+                  <div className="grid grid-cols-[auto_1fr] gap-x-5 sm:gap-x-7 gap-y-4">
                     <span
-                      className="font-display text-5xl sm:text-6xl lg:text-7xl leading-none pt-1 shrink-0"
-                      style={{ color: s.accent }}
+                      className={`font-display text-5xl sm:text-6xl lg:text-7xl leading-none pt-1 shrink-0 ${s.accent}`}
                     >
                       {s.n}
                     </span>
                     <div className="pt-1.5 min-w-0">
                       <span
-                        className="inline-flex items-center justify-center w-11 h-11 rounded-full mb-4"
-                        style={{ backgroundColor: s.accentSoft }}
+                        className={`inline-flex items-center justify-center w-11 h-11 rounded-full mb-4 ${s.accentSoft}`}
                       >
-                        <Icon
-                          className="w-5 h-5"
-                          strokeWidth={1.75}
-                          style={{ color: "var(--foreground)" }}
-                        />
+                        <Icon className="w-5 h-5 text-foreground" strokeWidth={1.75} />
                       </span>
-                      <h3 className="font-display text-2xl sm:text-[1.7rem] text-foreground leading-snug">
+                      <h2 className="font-display text-2xl sm:text-[1.7rem] text-foreground leading-snug break-words">
                         {s.title}
-                      </h3>
-                      <div className="mt-3 mb-4 h-px w-10" style={{ backgroundColor: s.accent }} />
-                      <p className="text-sm lg:text-base text-muted-foreground leading-relaxed max-w-md">
-                        {s.text}
-                      </p>
+                      </h2>
+                      <div className={`mt-3 h-px w-10 ${s.rule}`} />
                     </div>
+                    <p className="col-span-2 sm:col-span-1 sm:col-start-2 text-base text-muted-foreground leading-relaxed max-w-xl">
+                      {s.text}
+                    </p>
                   </div>
                 </div>
 
                 {/* Bild */}
                 <div className={flip ? "md:order-1" : undefined}>
                   <figure className="group">
-                    <div className="relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-[0_20px_50px_-20px_rgba(78,10,25,0.35)]">
+                    <div className="relative overflow-hidden rounded-3xl aspect-[4/3] shadow-photo">
                       <img
                         src={s.image}
                         alt={s.caption}
                         width={1024}
                         height={1024}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                        className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${s.n === "03" ? "object-[center_70%]" : ""}`}
                       />
                       <span
                         aria-hidden="true"
-                        className="absolute top-4 left-4 font-display text-primary-foreground/95 text-sm px-4 py-1.5 rounded-full"
-                        style={{
-                          backgroundColor: "rgba(78,10,25,0.55)",
-                          backdropFilter: "blur(4px)",
-                        }}
+                        className="absolute top-4 left-4 font-display bg-primary/75 backdrop-blur-sm text-primary-foreground text-sm px-4 py-1.5 rounded-full"
                       >
                         {s.n}
                       </span>
                     </div>
                     <figcaption className="mt-4 flex items-center gap-3">
-                      <span className="h-px w-6" style={{ backgroundColor: s.accent }} />
-                      <span className="text-xs tracking-[0.18em] uppercase text-muted-foreground font-medium">
+                      <span className={`h-px w-6 shrink-0 ${s.rule}`} />
+                      <span className="text-xs uppercase text-muted-foreground font-medium">
                         {s.caption}
                       </span>
                     </figcaption>

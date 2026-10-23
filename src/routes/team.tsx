@@ -35,10 +35,8 @@ function TeamPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-10 sm:pt-16 pb-8">
         <div>
-          <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-            · Die Köpfe dahinter
-          </p>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+          <p className="text-xs uppercase text-primary font-medium mb-6">· Die Köpfe dahinter</p>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground">
             Unser Team
           </h1>
           <p className="mt-6 text-base sm:text-lg text-foreground/70 max-w-md leading-relaxed">
@@ -47,11 +45,11 @@ function TeamPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-16 pb-24 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-6 sm:pt-10 pb-24 flex-1">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {team.map((m) => (
             <div key={m.name} className="flex flex-col items-center text-center">
-              <div className="w-40 h-40 rounded-full overflow-hidden bg-gradient-to-br from-brand-soft to-brand/40 shadow-[0_10px_30px_-15px_rgba(180,80,100,0.4)]">
+              <div className="w-40 h-40 rounded-full overflow-hidden bg-brand-soft shadow-product">
                 <img
                   src={m.photo}
                   alt={`Porträt von ${m.name}`}
@@ -60,7 +58,7 @@ function TeamPage() {
                 />
               </div>
               <p className="mt-6 font-medium text-foreground">{m.name}</p>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-foreground/70">{m.role}</p>
+              <p className="mt-1 text-xs uppercase text-foreground/70">{m.role}</p>
             </div>
           ))}
         </div>

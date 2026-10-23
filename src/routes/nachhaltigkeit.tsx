@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Leaf, Hand, UtensilsCrossed, Gift } from "lucide-react";
+import { Leaf, Hand, UtensilsCrossed } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 
@@ -41,9 +41,9 @@ function NachhaltigkeitPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-12 sm:py-16 flex-1 flex flex-col justify-center">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           {/* Left card */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-soft p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+          <div className="relative rounded-3xl overflow-hidden min-h-72 sm:min-h-80 lg:aspect-[4/5] bg-brand-soft p-6 sm:p-10 lg:p-10 flex flex-col justify-center">
             <img
               src={leaves}
               alt=""
@@ -54,13 +54,9 @@ function NachhaltigkeitPage() {
               className="absolute inset-0 w-full h-full object-cover opacity-70 mix-blend-multiply pointer-events-none"
             />
             <div className="relative">
-              <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-                · Frulicious
-              </p>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
-                Was Frulicious
-                <br />
-                besonders macht
+              <p className="text-xs uppercase text-primary font-medium mb-6">· Frulicious</p>
+              <h1 className="font-display text-3xl sm:text-4xl leading-[1.15] text-foreground max-w-md">
+                Was Frulicious besonders macht
               </h1>
             </div>
           </div>
@@ -70,16 +66,17 @@ function NachhaltigkeitPage() {
             {points.map((p) => {
               const Icon = p.icon;
               return (
-                <div key={p.title} className="flex items-start gap-6">
-                  <span className="shrink-0 w-14 h-14 rounded-full border border-brand/30 text-brand flex items-center justify-center">
+                <div
+                  key={p.title}
+                  className="grid grid-cols-[2.75rem_1fr] sm:grid-cols-[3.5rem_1fr] gap-x-4 sm:gap-x-6 gap-y-3"
+                >
+                  <span className="shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-full border border-brand/30 text-primary flex items-center justify-center">
                     <Icon className="w-6 h-6" strokeWidth={1.5} />
                   </span>
-                  <div className="pt-1">
-                    <h3 className="font-display text-2xl text-foreground">{p.title}</h3>
-                    <p className="mt-3 text-sm sm:text-base text-foreground/75 leading-relaxed max-w-xl">
-                      {p.text}
-                    </p>
-                  </div>
+                  <h2 className="self-center font-display text-2xl text-foreground">{p.title}</h2>
+                  <p className="col-span-2 sm:col-span-1 sm:col-start-2 text-base text-muted-foreground leading-relaxed max-w-xl">
+                    {p.text}
+                  </p>
                 </div>
               );
             })}
@@ -87,26 +84,21 @@ function NachhaltigkeitPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24">
-        <div className="rounded-3xl border border-brand-soft bg-brand-soft/30 p-8 sm:p-12 lg:p-16">
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16">
+      <section className="border-t border-brand/15 bg-brand-soft/30">
+        <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-14 sm:py-20">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12">
             {/* Heading */}
             <div>
               <span className="inline-flex w-14 h-14 rounded-full bg-amber-accent/20 text-bordeaux items-center justify-center">
                 <UtensilsCrossed className="w-6 h-6" strokeWidth={1.5} />
               </span>
-              <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mt-8 mb-4">
-                · Frulicious
-              </p>
-              <h2 className="font-display text-3xl sm:text-4xl leading-[1.15] text-foreground">
-                Vielseitiger
-                <br />
-                Genuss
+              <h2 className="mt-6 font-display text-3xl sm:text-4xl leading-[1.15] text-foreground">
+                Vielseitiger Genuss
               </h2>
             </div>
 
             {/* Text */}
-            <div className="space-y-6 text-sm sm:text-base text-foreground/75 leading-relaxed lg:pt-2">
+            <div className="max-w-2xl space-y-5 text-base lg:text-lg text-foreground/75 leading-relaxed">
               <p>
                 Frulicious lässt sich auf vielfältige Weise geniessen. Unsere schokoladenüberzogenen
                 Früchte eignen sich nicht nur als Snack für zwischendurch, sondern auch als
@@ -120,23 +112,6 @@ function NachhaltigkeitPage() {
                 Geschenk für besondere Anlässe. Ob als Wichtelgeschenk, Weihnachtsgeschenk oder
                 einfach als kleine Überraschung.
               </p>
-              <div className="flex flex-wrap gap-3 pt-2">
-                {[
-                  { icon: UtensilsCrossed, label: "Müesli" },
-                  { icon: UtensilsCrossed, label: "Joghurt" },
-                  { icon: UtensilsCrossed, label: "Glace" },
-                  { icon: UtensilsCrossed, label: "Porridge" },
-                  { icon: Gift, label: "Geschenke" },
-                ].map(({ icon: Icon, label }) => (
-                  <span
-                    key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-olive/40 bg-card px-4 py-1.5 text-sm text-foreground/80"
-                  >
-                    <Icon className="w-3.5 h-3.5 text-olive" strokeWidth={1.5} />
-                    {label}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>

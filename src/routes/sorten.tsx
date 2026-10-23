@@ -38,10 +38,8 @@ function SortenPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
-        <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-          · Unser Produkt
-        </p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
+        <p className="text-xs uppercase text-primary font-medium mb-6">· Unser Produkt</p>
+        <h1 className="font-display text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-foreground max-w-3xl">
           Gefriergetrocknete Früchte in Schokolade veredelt.
         </h1>
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
@@ -55,17 +53,17 @@ function SortenPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pb-24">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {sorten.map((s) => (
             <article
               key={s.name}
-              className="group relative flex flex-col bg-card rounded-3xl overflow-hidden pt-6 pb-8 px-6 sm:pt-8 sm:pb-8 sm:px-8 shadow-[0_10px_40px_-15px_rgba(180,80,100,0.15)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_26px_55px_-20px_rgba(180,80,100,0.35)]"
+              className="group relative flex flex-col bg-card rounded-3xl overflow-hidden pt-6 pb-8 px-6 sm:pt-8 sm:pb-8 sm:px-8 shadow-product transition-all duration-300 hover:-translate-y-1 hover:shadow-product-hover"
             >
               <Link
                 to="/sorte/$slug"
                 params={{ slug: s.slug }}
                 aria-label={`${s.name} ansehen`}
-                className="relative block h-60 sm:h-64 focus-visible:outline-none"
+                className="relative block h-60 sm:h-64 rounded-3xl"
               >
                 <img
                   src={kartenFotos[s.slug]}
@@ -77,24 +75,24 @@ function SortenPage() {
                 />
               </Link>
 
-              <div className="relative z-10 mt-1 flex flex-1 flex-col">
-                <h3 className="font-display text-2xl tracking-wide text-foreground">
+              <div className="relative z-10 mt-6 flex flex-1 flex-col">
+                <h2 className="font-display text-2xl text-foreground">
                   <Link
                     to="/sorte/$slug"
                     params={{ slug: s.slug }}
-                    className="transition-colors hover:text-brand"
+                    className="transition-colors hover:text-primary"
                   >
                     {s.name}
                   </Link>
-                </h3>
-                <p className="mt-1.5 text-xs tracking-[0.2em] uppercase text-brand font-medium leading-relaxed min-h-[1rem]">
+                </h2>
+                <p className="mt-2 text-xs uppercase text-primary font-medium leading-relaxed min-h-10">
                   {s.chocolate}
                 </p>
 
                 <Link
                   to="/sorte/$slug"
                   params={{ slug: s.slug }}
-                  className="group/link mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-brand transition-opacity hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand rounded-sm"
+                  className="group/link mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-primary transition-opacity hover:opacity-75 rounded-sm"
                 >
                   Mehr über {s.name.charAt(0) + s.name.slice(1).toLowerCase()}
                   <ArrowRight
@@ -133,7 +131,7 @@ function SortenPage() {
                 href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_share_sheet"
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="text-brand underline underline-offset-4 hover:opacity-75"
+                className="text-primary underline underline-offset-4 hover:opacity-75"
               >
                 Instagram-Profil
               </a>{" "}

@@ -18,21 +18,21 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-7xl text-brand">404</h1>
+        <h1 className="font-display text-7xl text-primary">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Seite nicht gefunden</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           Diese Seite gibt es leider nicht (mehr). Entdecke stattdessen unsere Sorten.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Zur Startseite
           </Link>
           <Link
             to="/sorten"
-            className="ml-3 inline-flex items-center justify-center rounded-full border border-brand/40 px-6 py-3 text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground"
+            className="inline-flex items-center justify-center rounded-full border border-brand/40 px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             Sorten ansehen
           </Link>
@@ -52,7 +52,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+        <h1 className="text-xl font-semibold text-foreground">
           Diese Seite konnte nicht geladen werden
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">

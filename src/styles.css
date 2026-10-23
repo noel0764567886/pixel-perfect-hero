@@ -29,6 +29,9 @@
   --color-rose-accent: var(--rose-accent);
   --color-olive: var(--olive);
   --color-amber-accent: var(--amber-accent);
+  --shadow-product: 0 12px 36px -18px color-mix(in srgb, var(--bordeaux) 22%, transparent);
+  --shadow-product-hover: 0 20px 44px -20px color-mix(in srgb, var(--bordeaux) 32%, transparent);
+  --shadow-photo: 0 20px 50px -20px color-mix(in srgb, var(--bordeaux) 35%, transparent);
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -85,7 +88,15 @@
   .font-display {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+  }
+  #inhalt > div {
+    min-height: calc(100svh - 80px);
+  }
+  @media (min-width: 640px) {
+    #inhalt > div {
+      min-height: calc(100svh - 96px);
+    }
   }
 }
 
@@ -116,7 +127,7 @@
     left: 1rem;
     top: 1rem;
     background-color: var(--bordeaux);
-    color: #fff;
+    color: var(--primary-foreground);
     padding: 0.625rem 1rem;
     border-radius: 9999px;
     font-size: 0.875rem;
