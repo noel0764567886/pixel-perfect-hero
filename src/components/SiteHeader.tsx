@@ -28,7 +28,7 @@ export function SiteHeader() {
       <Link
         to="/sorten"
         onClick={() => setMobileOpen(false)}
-        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        className="py-2 hover:text-primary transition [&.active]:text-primary [&.active]:underline underline-offset-8 decoration-rose-accent"
         activeProps={{ "aria-current": "page" }}
       >
         Sorten
@@ -36,7 +36,7 @@ export function SiteHeader() {
       <Link
         to="/herstellung"
         onClick={() => setMobileOpen(false)}
-        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        className="py-2 hover:text-primary transition [&.active]:text-primary [&.active]:underline underline-offset-8 decoration-rose-accent"
         activeProps={{ "aria-current": "page" }}
       >
         Herstellung
@@ -44,7 +44,7 @@ export function SiteHeader() {
       <Link
         to="/team"
         onClick={() => setMobileOpen(false)}
-        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        className="py-2 hover:text-primary transition [&.active]:text-primary [&.active]:underline underline-offset-8 decoration-rose-accent"
         activeProps={{ "aria-current": "page" }}
       >
         Team
@@ -52,7 +52,7 @@ export function SiteHeader() {
       <Link
         to="/nachhaltigkeit"
         onClick={() => setMobileOpen(false)}
-        className="hover:text-brand transition [&.active]:text-brand [&.active]:font-medium"
+        className="py-2 hover:text-primary transition [&.active]:text-primary [&.active]:underline underline-offset-8 decoration-rose-accent"
         activeProps={{ "aria-current": "page" }}
       >
         Was Frulicious besonders macht
@@ -84,7 +84,7 @@ export function SiteHeader() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden text-foreground/80 hover:text-brand transition"
+            className="lg:hidden w-11 h-11 flex items-center justify-center text-foreground/80 hover:text-primary transition"
           >
             {mobileOpen ? (
               <X className="w-6 h-6" strokeWidth={1.5} />
@@ -98,7 +98,7 @@ export function SiteHeader() {
           <nav
             id="mobile-nav"
             aria-label="Mobile Navigation"
-            className="absolute top-full left-0 right-0 mt-3 mx-4 sm:mx-6 bg-card rounded-2xl shadow-xl border border-brand/10 p-6 flex flex-col gap-4 text-base text-foreground/80 lg:hidden z-50"
+            className="absolute top-full left-0 right-0 mt-1 mx-4 sm:mx-6 bg-card rounded-3xl shadow-xl border border-brand/10 p-6 flex flex-col gap-2 text-base text-foreground/80 lg:hidden z-50"
           >
             {navLinks}
           </nav>

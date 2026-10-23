@@ -28,15 +28,15 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden flex flex-col">
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-10 items-center">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-20 grid lg:grid-cols-2 gap-10 items-center flex-1">
         <div className="relative z-10">
-          <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-8">
+          <p className="text-xs uppercase text-primary font-medium mb-6">
             Bio · Handgemacht · Gefriergetrocknet
           </p>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground font-normal">
             Gefriergetrocknete Früchte in
-            <br />
-            <span className="text-brand italic font-normal">Schokolade vollendet.</span>
+            {" "}
+            <span className="text-primary italic font-normal">Schokolade vollendet.</span>
           </h1>
           <div className="mt-8 h-[2px] w-16 bg-brand/60" />
           <p className="mt-8 text-base lg:text-lg text-foreground/70 max-w-md leading-relaxed">
@@ -46,24 +46,24 @@ function Index() {
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link
               to="/sorten"
-              className="whitespace-nowrap rounded-full bg-brand text-primary-foreground px-7 py-3.5 text-sm font-medium hover:bg-brand/90 transition shadow-md"
+              className="whitespace-nowrap rounded-full bg-primary text-primary-foreground px-7 py-3.5 text-sm font-medium hover:bg-primary/90 transition shadow-md"
             >
               Sorten entdecken
             </Link>
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative w-full max-w-lg mx-auto">
           <Sparkles
-            className="absolute -left-4 top-16 w-6 h-6 text-brand/70 z-10"
+            className="absolute left-2 top-16 w-6 h-6 text-brand/70 z-10 hidden sm:block"
             strokeWidth={1.5}
           />
           <Sparkles
-            className="absolute left-8 top-40 w-4 h-4 text-amber-accent z-10"
+            className="absolute left-8 top-40 w-4 h-4 text-amber-accent z-10 hidden sm:block"
             strokeWidth={1.5}
           />
           <svg
-            className="absolute -left-6 top-32 w-24 h-24 text-brand/50 z-10"
+            className="absolute left-0 top-32 w-24 h-24 text-brand/50 z-10 hidden sm:block"
             viewBox="0 0 100 100"
             fill="none"
             stroke="currentColor"
