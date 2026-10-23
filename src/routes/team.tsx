@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
-import teamAlisha from "@/assets/team-alisha.jpg.asset.json";
-import teamMilena from "@/assets/team-milena.jpg.asset.json";
-import teamIlan from "@/assets/team-ilan.jpg.asset.json";
-import teamAva from "@/assets/team-ava.jpg.asset.json";
-import teamNoah from "@/assets/team-noah.jpg.asset.json";
-import teamArno from "@/assets/team-arno.jpg.asset.json";
+import teamAlisha from "@/assets/team-alisha.jpg";
+import teamMilena from "@/assets/team-milena.jpg";
+import teamIlan from "@/assets/team-ilan.jpg";
+import teamAva from "@/assets/team-ava.jpg";
+import teamNoah from "@/assets/team-noah.jpg";
+import teamArno from "@/assets/team-arno.jpg";
 
 
 export const Route = createFileRoute("/team")({
@@ -23,12 +23,12 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Alisha Balasubramaniam", role: "CEO", photo: teamAlisha.url },
-  { name: "Milena Blaser", role: "CAO", photo: teamMilena.url },
-  { name: "Ilan Bino", role: "CFO", photo: teamIlan.url },
-  { name: "Ava Christener", role: "CTO", photo: teamAva.url },
-  { name: "Noah Perren", role: "CMO", photo: teamNoah.url },
-  { name: "Arno Blank", role: "CPO", photo: teamArno.url },
+  { name: "Alisha Balasubramaniam", role: "CEO", photo: teamAlisha },
+  { name: "Milena Blaser", role: "CAO", photo: teamMilena },
+  { name: "Ilan Bino", role: "CFO", photo: teamIlan },
+  { name: "Ava Christener", role: "CTO", photo: teamAva },
+  { name: "Noah Perren", role: "CMO", photo: teamNoah },
+  { name: "Arno Blank", role: "CPO", photo: teamArno },
 ];
 
 function TeamPage() {

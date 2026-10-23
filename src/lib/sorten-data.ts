@@ -1,6 +1,6 @@
-import banane from "@/assets/sorte-banane-detail.jpg.asset.json";
-import kiwi from "@/assets/sorte-kiwi-detail.jpg.asset.json";
-import apfel from "@/assets/sorte-apfel-detail.jpg.asset.json";
+import banane from "@/assets/sorte-banane-detail.jpg";
+import kiwi from "@/assets/sorte-kiwi-detail.jpg";
+import apfel from "@/assets/sorte-apfel-detail.jpg";
 
 
 export type Sorte = {
@@ -21,7 +21,7 @@ export const sorten: Sorte[] = [
     chocolate: "DUNKLE SCHOKOLADE",
     price: "CHF 10.90",
     weight: "45 g",
-    image: banane.url,
+    image: banane,
     intro:
       "Entdecke die perfekte Kombination aus den natürlichen, süssen Bio-Bananen und Bio-Zartbitterkuvertüre (60% Kakaanteil). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Bananen weitgehend erhalten. Anschliessend werden die Bananenscheiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Banane (75,27 %), Bio-Zartbitterkuvertüre (24,73 %)",
@@ -32,7 +32,7 @@ export const sorten: Sorte[] = [
     chocolate: "MILCHSCHOKOLADE",
     price: "CHF 10.90",
     weight: "45 g",
-    image: kiwi.url,
+    image: kiwi,
     intro:
       "Entdecke die besondere Kombination aus dem erfrischenden, säuerlichen Geschmack unserer Bio-Kiwis und Bio-Milchkuvertüre (40% Kakaanteil). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Kiwis weitgehend erhalten. Anschliessend werden die Kiwischeiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Kiwi (75.27 %), Bio-Milchkuvertüre (24,73 %)",
@@ -43,7 +43,7 @@ export const sorten: Sorte[] = [
     chocolate: "DUNKLE SCHOKOLADE & MILCHSCHOKOLADE",
     price: "CHF 10.90",
     weight: "45 g",
-    image: apfel.url,
+    image: apfel,
     intro:
       "Geniesse das harmonische Zusammenspiel aus dem fruchtigen, süß-säuerlichen Geschmack unserer Bio-Äpfel und einer Mischung aus Bio-Milch- und Bio-Zartbitterkuvertüre (60 % Kakaanteil bei der Zartbitterkuvertüre & 40% Kakaanteil bei der Milchkuvertüre). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Äpfel weitgehend erhalten. Anschliessend werden die Apfelscheiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
     zutaten: "Bio-Apfel (38,09 %), Bio-Zartbitterkuvertüre (30,995 %), Bio-Milchkuvertüre (30,955 %)",
