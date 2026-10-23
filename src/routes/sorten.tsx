@@ -39,7 +39,7 @@ function SortenPage() {
     <div className="min-h-screen bg-gradient-to-b from-brand-soft/60 via-background to-background overflow-hidden">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
         <p className="text-xs uppercase text-primary font-medium mb-6">· Unser Produkt</p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground max-w-3xl">
+        <h1 className="font-display text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-foreground max-w-3xl">
           Gefriergetrocknete Früchte in Schokolade veredelt.
         </h1>
         <p className="mt-6 text-base lg:text-lg text-foreground/70 max-w-xl leading-relaxed">
