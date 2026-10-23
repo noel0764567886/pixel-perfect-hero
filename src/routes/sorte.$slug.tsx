@@ -57,8 +57,7 @@ function SortePage() {
         </Link>
 
         <div className="mt-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="relative flex justify-center">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[82%] h-[92%] bg-brand-soft rounded-t-full" />
+          <div className="flex justify-center">
             <img
               src={sorte.image}
               alt={`Frulicious ${sorte.name.charAt(0) + sorte.name.slice(1).toLowerCase()} – Produktpackung vor der Berner Altstadt`}
