@@ -16,5 +16,5 @@ bun run dev
 - `/` Startseite
 - `/sorten` Sortenübersicht mit `/sorte/banane`, `/sorte/kiwi`, `/sorte/apfel`
 - `/herstellung` Herstellung
-- `/was-frulicious-besonders-macht` Bio und Handgemacht
+- `/nachhaltigkeit` Bio und Handgemacht
 - `/team` Team
