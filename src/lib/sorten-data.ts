@@ -2,7 +2,6 @@ import banane from "@/assets/sorte-banane-detail.jpg";
 import kiwi from "@/assets/sorte-kiwi-detail.jpg";
 import apfel from "@/assets/sorte-apfel-detail.jpg";
 
-
 export type Sorte = {
   slug: string;
   name: string;
@@ -46,7 +45,8 @@ export const sorten: Sorte[] = [
     image: apfel,
     intro:
       "Geniesse das harmonische Zusammenspiel aus dem fruchtigen, süß-säuerlichen Geschmack unserer Bio-Äpfel und einer Mischung aus Bio-Milch- und Bio-Zartbitterkuvertüre (60 % Kakaanteil bei der Zartbitterkuvertüre & 40% Kakaanteil bei der Milchkuvertüre). Durch die schonende Gefriertrocknung bleibt das natürliche Aroma der Äpfel weitgehend erhalten. Anschliessend werden die Apfelscheiben von unserem Team in sorgfältiger Handarbeit auf einer Seite mit einer feinen Schicht Schokolade veredelt.",
-    zutaten: "Bio-Apfel (38,09 %), Bio-Zartbitterkuvertüre (30,995 %), Bio-Milchkuvertüre (30,955 %)",
+    zutaten:
+      "Bio-Apfel (38,09 %), Bio-Zartbitterkuvertüre (30,995 %), Bio-Milchkuvertüre (30,955 %)",
   },
 ];
 

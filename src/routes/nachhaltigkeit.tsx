@@ -6,12 +6,19 @@ import leaves from "@/assets/nachhaltigkeit-leaves.jpg";
 export const Route = createFileRoute("/nachhaltigkeit")({
   head: () => ({
     meta: [
-       { title: "Was Frulicious besonders macht – frulicious" },
-       { name: "description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt – vielseitig geniessen als Snack, Topping oder Geschenk." },
-       { property: "og:title", content: "Was Frulicious besonders macht – frulicious" },
-       { property: "og:description", content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt." },
-       { property: "og:type", content: "website" },
-       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Was Frulicious besonders macht – frulicious" },
+      {
+        name: "description",
+        content:
+          "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt – vielseitig geniessen als Snack, Topping oder Geschenk.",
+      },
+      { property: "og:title", content: "Was Frulicious besonders macht – frulicious" },
+      {
+        property: "og:description",
+        content: "100% bio-zertifizierte Früchte und Schokolade, von Hand veredelt und abgepackt.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: NachhaltigkeitPage,
@@ -33,12 +40,10 @@ const points = [
 function NachhaltigkeitPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-
       <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 py-12 sm:py-16 flex-1 flex flex-col justify-center">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left card */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-brand-soft p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
-
             <img
               src={leaves}
               alt=""
@@ -50,11 +55,13 @@ function NachhaltigkeitPage() {
             />
             <div className="relative">
               <p className="text-xs tracking-[0.25em] uppercase text-brand font-medium mb-6">
-                 · Frulicious
+                · Frulicious
               </p>
-               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
-                 Was Frulicious<br />besonders macht
-               </h1>
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-foreground">
+                Was Frulicious
+                <br />
+                besonders macht
+              </h1>
             </div>
           </div>
 
@@ -92,7 +99,9 @@ function NachhaltigkeitPage() {
                 · Frulicious
               </p>
               <h2 className="font-display text-3xl sm:text-4xl leading-[1.15] text-foreground">
-                Vielseitiger<br />Genuss
+                Vielseitiger
+                <br />
+                Genuss
               </h2>
             </div>
 
@@ -100,11 +109,11 @@ function NachhaltigkeitPage() {
             <div className="space-y-6 text-sm sm:text-base text-foreground/75 leading-relaxed lg:pt-2">
               <p>
                 Frulicious lässt sich auf vielfältige Weise geniessen. Unsere schokoladenüberzogenen
-                Früchte eignen sich nicht nur als Snack für zwischendurch, sondern auch als besondere
-                Ergänzung zu verschiedenen Speisen. Ob als Topping für Müesli, Joghurt, Glace oder
-                Porridge – Frulicious verleiht zahlreichen Gerichten eine fruchtig-schokoladige Note.
-                Auch zum Verfeinern und Dekorieren von Desserts lassen sich unsere Produkte vielseitig
-                einsetzen.
+                Früchte eignen sich nicht nur als Snack für zwischendurch, sondern auch als
+                besondere Ergänzung zu verschiedenen Speisen. Ob als Topping für Müesli, Joghurt,
+                Glace oder Porridge – Frulicious verleiht zahlreichen Gerichten eine
+                fruchtig-schokoladige Note. Auch zum Verfeinern und Dekorieren von Desserts lassen
+                sich unsere Produkte vielseitig einsetzen.
               </p>
               <p>
                 Darüber hinaus eignet sich Frulicious hervorragend als kleines Mitbringsel oder als

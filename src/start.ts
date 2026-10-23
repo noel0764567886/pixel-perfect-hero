@@ -29,7 +29,11 @@ const securityHeadersMiddleware = createMiddleware().server(async ({ next }) => 
   const res = (result as { response?: Response }).response;
   if (res instanceof Response) {
     for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
-      try { res.headers.set(k, v); } catch { /* immutable headers */ }
+      try {
+        res.headers.set(k, v);
+      } catch {
+        /* immutable headers */
+      }
     }
   }
   return result;

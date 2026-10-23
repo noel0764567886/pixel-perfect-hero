@@ -11,32 +11,71 @@ export function SiteFooter() {
             <img src={logo} alt="frulicious Logo" className="h-16 w-auto" />
           </Link>
 
-          <p className="text-xs text-foreground/60">
-            © 2025 Frulicious. Alle Rechte vorbehalten.
+          <p className="text-xs text-foreground/60">© 2025 Frulicious. Alle Rechte vorbehalten.</p>
+        </div>
+
+        <div>
+          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+            Sorten
           </p>
-        </div>
-
-        <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Sorten</p>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li><Link to="/sorte/$slug" params={{ slug: "banane" }} className="hover:text-brand transition">Banane</Link></li>
-            <li><Link to="/sorte/$slug" params={{ slug: "kiwi" }} className="hover:text-brand transition">Kiwi</Link></li>
-            <li><Link to="/sorte/$slug" params={{ slug: "apfel" }} className="hover:text-brand transition">Apfel</Link></li>
+            <li>
+              <Link
+                to="/sorte/$slug"
+                params={{ slug: "banane" }}
+                className="hover:text-brand transition"
+              >
+                Banane
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sorte/$slug"
+                params={{ slug: "kiwi" }}
+                className="hover:text-brand transition"
+              >
+                Kiwi
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sorte/$slug"
+                params={{ slug: "apfel" }}
+                className="hover:text-brand transition"
+              >
+                Apfel
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Unternehmen</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+            Unternehmen
+          </p>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li><Link to="/team" className="hover:text-brand transition">Team</Link></li>
-            <li><Link to="/nachhaltigkeit" className="hover:text-brand transition">Was Frulicious besonders macht</Link></li>
-            <li><Link to="/herstellung" className="hover:text-brand transition">Herstellung</Link></li>
-
+            <li>
+              <Link to="/team" className="hover:text-brand transition">
+                Team
+              </Link>
+            </li>
+            <li>
+              <Link to="/nachhaltigkeit" className="hover:text-brand transition">
+                Was Frulicious besonders macht
+              </Link>
+            </li>
+            <li>
+              <Link to="/herstellung" className="hover:text-brand transition">
+                Herstellung
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">Kontakt</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-foreground font-semibold mb-4">
+            Kontakt
+          </p>
           <ul className="space-y-2 text-sm text-foreground/70">
             <li>
               <a href="mailto:frulicious@outlook.com" className="hover:text-brand transition">
@@ -49,7 +88,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-start md:items-end justify-between gap-6">
           <a
-href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_share_sheet"
+            href="https://www.instagram.com/frulicious_official/?utm_source=ig_web_button_share_sheet"
             target="_blank"
             rel="noopener noreferrer external"
             aria-label="frulicious auf Instagram (öffnet in neuem Tab)"

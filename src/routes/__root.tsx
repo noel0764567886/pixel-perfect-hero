@@ -14,7 +14,6 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/SiteHeader";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -87,9 +86,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "frulicious – Frucht trifft Schokolade" },
-      { name: "description", content: "Bio-zertifizierte, gefriergetrocknete Früchte, handgemacht in feinster Schokolade." },
+      {
+        name: "description",
+        content:
+          "Bio-zertifizierte, gefriergetrocknete Früchte, handgemacht in feinster Schokolade.",
+      },
       { property: "og:title", content: "frulicious – Frucht trifft Schokolade" },
-      { property: "og:description", content: "Bio-zertifizierte, gefriergetrocknete Früchte, handgemacht in feinster Schokolade." },
+      {
+        property: "og:description",
+        content:
+          "Bio-zertifizierte, gefriergetrocknete Früchte, handgemacht in feinster Schokolade.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -97,8 +104,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
-
-
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -125,13 +130,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-        <a href="#inhalt" className="skip-link">Zum Inhalt springen</a>
-        <SiteHeader />
-        <main id="inhalt">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
+      <a href="#inhalt" className="skip-link">
+        Zum Inhalt springen
+      </a>
+      <SiteHeader />
+      <main id="inhalt">
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </main>
     </QueryClientProvider>
   );
 }
-
