@@ -2,7 +2,7 @@
 
 Website für Frulicious — gefriergetrocknete Bio-Früchte in Schokolade veredelt.
 
-Gebaut mit [Lovable](https://lovable.dev) (TanStack Start, Tailwind CSS).
+Gebaut mit TanStack Start und Tailwind CSS.
 
 ## Entwicklung
 
@@ -16,5 +16,5 @@ bun run dev
 - `/` Startseite
 - `/sorten` Sortenübersicht mit `/sorte/banane`, `/sorte/kiwi`, `/sorte/apfel`
 - `/herstellung` Herstellung
-- `/nachhaltigkeit` Bio und Handgemacht
+- `/nachhaltigkeit` Was Frulicious besonders macht
 - `/team` Team
