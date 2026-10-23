@@ -98,7 +98,7 @@ export function SiteHeader() {
           <nav
             id="mobile-nav"
             aria-label="Mobile Navigation"
-            className="absolute top-full left-0 right-0 mt-1 mx-4 sm:mx-6 bg-card rounded-3xl shadow-xl border border-brand/10 p-6 flex flex-col gap-2 text-base text-foreground/80 lg:hidden z-50"
+            className="absolute top-full left-0 right-0 mt-1 mx-4 sm:mx-6 max-h-[calc(100dvh-7rem)] overflow-y-auto bg-card rounded-3xl shadow-xl border border-brand/10 p-6 flex flex-col gap-2 text-base text-foreground/80 lg:hidden z-50"
           >
             {navLinks}
           </nav>

@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Render the shared site header once in the root layout; informational product routes have no cart or checkout dependencies, keeping removed ordering flows out of the route graph.
+- Define shared shadows and color roles in the global stylesheet; use semantic utilities in pages so the corporate palette stays consistent.

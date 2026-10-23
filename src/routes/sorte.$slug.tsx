@@ -114,7 +114,7 @@ function SortePage() {
                   width={768}
                   height={1366}
                   loading="lazy"
-                  className="w-24 h-24 rounded-2xl object-cover object-[center_65%]"
+                  className="w-24 h-24 rounded-2xl object-contain"
                 />
               </div>
               <div className="min-w-0">

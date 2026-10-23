@@ -47,7 +47,7 @@ function TeamPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-16 pb-24 flex-1">
+      <section className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-10 pt-6 sm:pt-10 pb-24 flex-1">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {team.map((m) => (
             <div key={m.name} className="flex flex-col items-center text-center">
