@@ -2,14 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { sorten } from "@/lib/sorten-data";
-import bananeFoto from "@/assets/sorte-banane-foto.jpg.asset.json";
-import kiwiFoto from "@/assets/sorte-kiwi-foto.jpg.asset.json";
-import apfelFoto from "@/assets/sorte-apfel-foto.jpg.asset.json";
+import bananeFoto from "@/assets/sorte-banane-foto.jpg";
+import kiwiFoto from "@/assets/sorte-kiwi-foto.jpg";
+import apfelFoto from "@/assets/sorte-apfel-foto.jpg";
 
 const kartenFotos: Record<string, string> = {
-  banane: bananeFoto.url,
-  kiwi: kiwiFoto.url,
-  apfel: apfelFoto.url,
+  banane: bananeFoto,
+  kiwi: kiwiFoto,
+  apfel: apfelFoto,
 };
 
 export const Route = createFileRoute("/sorten")({
